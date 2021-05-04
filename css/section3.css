@@ -1,0 +1,229 @@
+#section03 .location_3{
+    position: absolute;
+    right: 98px;
+    top: 450px;
+}
+
+#section03 .title{
+    position: absolute;
+    left: 700px;
+    top: 148px;
+    z-index: 2;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section03.on .title{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#section03 .boxes_container{
+    width: 1400px;
+    height: 400px;
+    position: absolute;
+    margin-top: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#section03 .boxes_container .center{
+    top: -50px;
+}
+
+#section03 .boxes_container > div{
+    position: relative;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+
+#section03.on .boxes_container > div{
+    transform: translateY(0);
+    opacity: 1;
+}
+#section03 .title{transition-delay:0.1s}
+#section03 .boxes_container > div:nth-child(1){transition-delay:0.2s}
+#section03 .boxes_container > div:nth-child(2){transition-delay:0.3s}
+#section03 .boxes_container > div:nth-child(3){transition-delay:0.4s}
+#section03 .boxes_container > div .overlay_1{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    border: 4px solid #bccda9;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: all 1s;
+}
+
+
+#section03 .boxes_container > div:nth-child(2) .overlay_1{
+    border: 4px solid #baaa6c;
+}
+
+
+#section03 .boxes_container > div:nth-child(3) .overlay_1{
+    border: 4px solid #e699ae;
+}
+
+
+
+#section03 .boxes_container > div .font_1{
+    position: absolute;
+    left: 64px;
+    top: 64px;
+    z-index: 100;
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+#section03 .boxes_container > div:hover .font_1{
+    opacity: 1;
+}
+
+#section03 .boxes_container > div .box_1{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+#section03 .boxes_container > div .box_1 .line{
+    width: 2px;
+    height: 0;
+    background: #94a680;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 140px;
+    z-index: 100;
+    transition: all 1s;
+}
+
+
+#section03 .boxes_container > div:nth-child(2) .box_1 .line{
+    background: #736738;
+}
+
+#section03 .boxes_container > div:nth-child(3) .box_1 .line{
+    background: #e699ae;
+}
+
+#section03 .boxes_container > div .box_1:hover .line{
+    height: 100px;
+}
+
+#section03 .boxes_container > div .box_1 > .img_1{
+    transition: all 0.6s
+}
+
+#section03 .boxes_container > div:hover .box_1 > .img_1{
+    transform: scale(1.3);
+}
+
+
+#section03 .boxes_container .shadow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #426339;
+    transform: translate(0,0);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.6s;
+}
+
+
+#section03 .boxes_container > div:nth-child(2) .shadow{
+    background: #cfc398;
+}
+
+#section03 .boxes_container > div:nth-child(3) .shadow{
+    background: #b52c3e;
+}
+
+
+#section03 .boxes_container > div:hover .shadow{
+    opacity: 1;
+    transform: translate(20px,20px);
+}
+
+
+#section03 .boxes_container > div:hover .overlay_1{
+    opacity: 1;
+}
+
+
+#section03 .boxes_container .box_1{
+    margin-bottom: 40px;
+}
+
+
+
+#section03 .bg_letters{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#section03 .bg_letters .b {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+#section03 .bg_letters .v {
+    position: absolute;
+    left: 88px;
+    top: 710px;
+}
+
+
+#section03 .bg_letters .l {
+    position: absolute;
+    left: 440px;
+    top: 50px;
+}
+
+#section03 .bg_letters .g {
+    position: absolute;
+    left: 800px;
+    top: 714px;
+}
+
+#section03 .bg_letters .a {
+    position: absolute;
+    left: 1400px;
+    top: 0;
+}
+
+#section03 .bg_letters .r {
+    position: absolute;
+    left: 1700px;
+    top: 660px;
+}
+
+
+#section03 .bg_letters .i {
+    position: absolute;
+    left: 2300px;
+    top: 148px;
+}

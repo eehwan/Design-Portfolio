@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const container = Scrollbar.init(stage, {
         damping: 0.1,
         delegateTo: stage,
-        continuousScrolling: true,
+        continuousScrolling: false,
         alwaysShowTracks: false,
     });
     container.setPosition(0, 0);
@@ -33,93 +33,75 @@ window.addEventListener('DOMContentLoaded', function () {
     container.addListener((e) => {
 
         let scrollTop = container.scrollTop;
-        console.log(scrollTop);
 
-        if(scrollTop >= 750){
+        // section2
+        if(scrollTop >= 750 && scrollTop <=1520){
             $('#section02').addClass('on');
+        }else{
+            $('#section02').removeClass('on');
         }
-        if(scrollTop >= 1520){
+        // section3
+        if(scrollTop >= 1520 && scrollTop <= 2500){
             $('#section03').addClass('on');
+        }else{
+            $('#section03').removeClass('on');
         }
-
-        if(scrollTop >= 2500){
+        // section4
+        if(scrollTop >= 2500 && scrollTop <= 3200){
             $('#section04').addClass('on');
+        }else{
+            $('#section04').removeClass('on');
         }
-
+        // section6
         if(scrollTop >= 4000){
             $('#section06').addClass('on');
         }
-
         // $('.box1').css('transform', `translateY(${scrollTop * 0.7}px)`)
-
     });
 
 
 
     $('.topbutton').click(function () {
-
         container.scrollTo(0, 0, 600, {
             callback: () => console.log('done!'),
             easing: easing.easeInOutCirc,
         });
-
-
     });
 
 
     (function () {
-
-
-
+        // flag
         var $mouseX = 0,
             $mouseY = 0,
             $xp = 0,
             $yp = 0,
             $flag =  $("#flag");
-
-
-
-        $(document).mousemove(function (e) {
+        $('.play_hover').mousemove((e) => {
+            $('#flag').addClass('on');
             $mouseX = e.pageX;
             $mouseY = e.pageY;
-        });
-
-        var $loop = setInterval(function () {
-// change 12 to alter damping higher is slower
-            $xp += (($mouseX - $xp) / 32);
-            $yp += (($mouseY - $yp) / 32);
-            $flag.css({left: ($xp-$flag.width()*0.5) + 'px', top: ($yp -$flag.height()*0.5) + 'px'});
-        }, 1);
-
-
-
-
-
-        $('.play_hover').mouseenter(function () {
-
-            $('#flag').addClass('on');
+            
+            setInterval(function () {
+                // change 12 to alter damping higher is slower
+                $xp += (($mouseX - $xp) / 32);
+                $yp += (($mouseY - $yp) / 32);
+                $flag.css({left: ($xp-$flag.width()*0.5) + 'px', top: ($yp -$flag.height()*0.5) + 'px'});
+            }, 1);
         }).mouseleave(function () {
             $('#flag').removeClass('on');
-
-        })
-
-
+        });
+            
+        // 메뉴창
         $('.menu').click(function () {
             $('#mega').addClass('on');
-            // $('#mega').removeClass('');
         })
-
         $('.x_button').click(function () {
             $('#mega').removeClass('on');
         })
 
-
+        // 검색창
         $('.search_area').click(function () {
-            $('.serach_area_click').addClass('on');
-        })
-
-        $('.img_slider').click(function () {
-            $('.flag').addClass('on');
+            $('.serach_area_click').toggleClass('on');
         })
 
 
@@ -148,8 +130,6 @@ window.addEventListener('DOMContentLoaded', function () {
             initialSlide: 0,// slider number
             cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)', //css transition
             variableWidth: false,
-
-
         });
 
         // $("#flag").slick({
@@ -176,8 +156,6 @@ window.addEventListener('DOMContentLoaded', function () {
         //     initialSlide: 0,// slider number
         //     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)', //css transition
         //     variableWidth: false,
-        //
-        //
         // });
 
 
@@ -214,32 +192,26 @@ window.addEventListener('DOMContentLoaded', function () {
 
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 
+            //    1
             if(nextSlide === 0){
-
-                console.log('너는');
                 $('.new_high_jewerly_txt').css('color', `#af7945`);
                 $('.preview-next_slider').css('background', `#af7945`);
                 $('#section01 .button_slider').css('border', `1px solid #af7945`);
-
-            //    1
+            //    2
             }else if(nextSlide === 1){
-                console.log('몇번');
                 $('.new_high_jewerly_txt').css('color', `#175d4d`);
                 $('.preview-next_slider').css('background', `#175d4d`);
                 $('#section01 .button_slider').css('border', `1px solid #175d4d`);
-            //    2
+            //    3
             }else if(nextSlide === 2){
-                console.log('째니');
                 $('.new_high_jewerly_txt').css('color', `#b0136c`);
                 $('.preview-next_slider').css('background', `#b0136c`);
                 $('#section01 .button_slider').css('border', `1px solid #175d4d`);
-            //    3
             }
 
         }).on('afterChange', function (event, slick, currentSlide, nextSlide) {
             $('.svg-clip').removeClass('on');
             if (currentSlide === 0) {
-
 
                 $('.svg-clip:nth-child(1)').addClass('on');
 

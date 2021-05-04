@@ -1,0 +1,248 @@
+@-webkit-keyframes inside-out {
+    0% {
+        /*left:-300px;*/
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes inside-out2{
+    0% {
+        /*bottom:-300px;*/
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    100% {
+        /*bottom:30px;*/
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#section01 .left_box{
+    flex: 1.5;
+    background-color: #000;
+    background-size: cover;
+    background-image: url("../main-main_visual/baroco_pattern_.jpg");
+    position: relative;
+}
+
+
+#section01 .left_box .top{
+    width: 700px;
+    height: 270px;
+    position: absolute;
+    left: 230px;
+    top: 250px;
+    animation-name: inside-out;
+    animation-duration:1s;
+    animation-iteration-count:1;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    /*animation-direction: alternate;*/
+}
+
+
+#section01 .left_box .top .collection_txt{
+    width: 360px;
+    height: 87px;
+    position: absolute;
+    top: 0;
+    left: 360px;
+    font-size: 86px;
+    font-family: "Baskerville", sans-serif;
+}
+
+.svg-clip {
+    width: 380px;
+    -webkit-clip-path: url(#svgPath);
+    clip-path: url(#svgPath);
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*z-index: -1;*/
+    opacity: 0;
+    transition: all 1s;
+    /*margin:0 auto;*/
+}
+.svg-clip.on{
+    opacity: 1;
+}
+
+.collection_txt svg{
+    /*width: 100%;*/
+    /*height: 100%;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+svg clippath text {
+    font-size: 86px;
+}
+
+
+#section01 .left_box .top .new_high_jewerly_txt{
+    position: absolute;
+    left: 10px;
+    top: 110px;
+    color: #af7945;
+    font-size: 22px;
+    letter-spacing: 18px;
+    white-space: nowrap;
+    font-family: "Gotham Medium", sans-serif;
+    transition: all 1s .2s;
+}
+
+.button_hover{
+    position: absolute;
+    left: 244px;
+    top: 613px;
+    z-index: 11;
+    opacity: 0;
+    transition: all .5s
+}
+
+.button_hover:hover{
+    opacity: 1;
+}
+
+.left_slider{
+    position: absolute;
+    bottom: 80px;
+    left: 430px;
+    animation-name: inside-out2;
+    animation-duration:1s;
+    animation-iteration-count:1;
+    /*animation-direction: alternate;*/
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
+
+
+/* left slider ----------------------------------------------------------------------- */
+.left_slider .slider01{
+    position: absolute;
+    top: 40px;
+    left: -200px;
+    z-index: 2;
+}
+
+.left_slider .slider01 .button_slider{
+    width: 240px;
+    height: 56px;
+    position: relative;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid #af7945;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border .5s .5s,background 1s;
+}
+
+.left_slider .slider01 .button_slider:hover{
+    background: rgba(0,0,0,1);
+    color: #fff;
+}
+
+.left_slider .slider01 .button_slider a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.left_slider .slider01 .button_slider:hover .button_1{
+    -webkit-filter: invert(100%)!important;
+}
+
+/*overflow 하려고 만든 클래스*/
+.left_slider .slider02{
+    overflow: hidden;
+}
+/*overflow 하려고 만든 클래스*/
+
+.left_slider .slider02 .img_slider{
+    width: 520px;
+    height: 280px;
+    position: relative;
+    /*overflow: hidden;*/
+    transition: all 1s;
+}
+
+.left_slider .slider02 .img_slider:hover{
+    transform: scale(1.1);
+}
+.left_slider .slider03{
+    position: absolute;
+    top: 0;
+    right: -104px;
+    z-index: 3;
+}
+.left_slider .slider03 .preview-next_slider{
+    width: 104px;
+    height: 280px;
+    position: relative;
+    background: #af7945;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s .2s;
+}
+
+.left_slider .slider03 .preview-next_slider .inner >div.preview_hover{
+    opacity:.5;
+    transition: all .5s;
+}
+
+.left_slider .slider03 .preview-next_slider .inner >div.preview_hover:hover{
+    opacity:1;
+}
+
+.left_slider .slider03 .preview-next_slider .inner >div.next_hover{
+    opacity:.5;
+    transition: all .5s;
+}
+
+.left_slider .slider03 .preview-next_slider .inner >div.next_hover:hover{
+    opacity:1;
+}
+
+
+.left_slider .slider03 .preview-next_slider .inner .preview_hover{
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------------------- */
+
+
+
+
+
+#section01 .right_box{
+    flex: 1.1;
+    background-color: #666;
+}
+
+
+#right_slider{
+    width: 812px;
+    height: 100vh;
+    position: relative;
+}
+
+
+#section01 .right_box .dark-area_1{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(40%);
+    z-index: 2;
+
+}

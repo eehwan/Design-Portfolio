@@ -1,0 +1,217 @@
+#section04{
+    transition: all 1s;
+}
+
+#section04{transition-delay:1s}
+#section04 .bg{transition-delay:1s}
+#section04 .bg{
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s;
+}
+
+#section04.on .bg{
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+#section04 .scroller{
+    position: absolute;
+    left: 1020px;
+    top: 160px;
+}
+
+#section04 .scroller_point{
+    position: absolute;
+    left:0;
+    top: 0;
+}
+
+
+
+#section04 .leftbox .brand_txt_1{transition-delay:0.2s}
+#section04 .leftbox .subtext_area{transition-delay:0.3s}
+#section04 .leftbox .brand_button_1{transition-delay:0.5s}
+
+#section04 .leftbox{
+    width: 620px;
+    height: 564px;
+    position: absolute;
+    left: 324px;
+    top: 198px;
+}
+
+#section04 .leftbox .brand_txt_1{
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section04.on .leftbox .brand_txt_1{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#section04 .leftbox .brand_button_1{
+    position: absolute;
+    left: 0;
+    top: 510px;
+}
+
+
+#section04 .leftbox .brand_button_1{
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section04.on .leftbox .brand_button_1{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#section04 .leftbox .brand_button_hover {
+    position: absolute;
+    left: 0;
+    top: 511px;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+#section04 .leftbox .brand_button_hover:hover{
+    opacity: 1;
+}
+
+#section04 .leftbox .subtext_area{
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section04.on .leftbox .subtext_area{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+#section04 .leftbox .subtext_area{
+    width: 615px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 190px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Gotham Book",sans-serif;
+    font-size: 16px;
+    color: #737373;
+    letter-spacing: 8px;
+    transition: all 0.6s;
+}
+
+/*transition : all 1s 효과 한번에 줄 수는 없는 것인가요?*/
+/*transition : all 1s 효과 한번에 줄 수는 없는 것인가요?*/
+/*transition : all 1s 효과 한번에 줄 수는 없는 것인가요?*/
+#section04 .leftbox .subtext_area .history_txt:hover{
+    font-family: "Gotham Bold",sans-serif;
+    color: #cacaca;
+}
+#section04 .leftbox .subtext_area .exhibition_txt:hover{
+    font-family: "Gotham Bold",sans-serif;
+    color: #cacaca;
+}
+#section04 .leftbox .subtext_area .recruit_txt:hover{
+    font-family: "Gotham Bold",sans-serif;
+    color: #cacaca;
+}
+#section04 .leftbox .subtext_area .active_txt:hover{
+    font-family: "Gotham Bold",sans-serif;
+    color: #cacaca;
+}
+
+
+
+#section04 .leftbox .identity_txt{
+    width: 100px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 270px;
+}
+
+
+#section04 .rightbox{
+    width: 850px;
+    height: 980px;
+    position: absolute;
+    left: 1070px;
+    top: 0;
+}
+
+
+
+#section04 .rightbox .inner{
+    animation: move 10s infinite linear;
+    opacity: 0;
+    transition: all 2s;
+}
+
+#section04.on .rightbox .inner{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes move {
+    to{
+        transform: translateY(-1800px);
+    }
+
+}
+
+#section04 .rightbox .inner > div{
+    width: 850px;
+    height: 1800px;
+    position: relative;
+    /*transform: translateY(-600px);*/
+/*    배치시킬 때 편하게 배치 하기위함*/
+}
+
+#section04 .rightbox .brand_id_img_1{
+    position: absolute;
+    left: 140px;
+    top: 0;
+}
+
+#section04 .rightbox .brand_id_img_2{
+    position: absolute;
+    right: 0;
+    top: 174px;
+}
+
+#section04 .rightbox .brand_id_img_3{
+    position: absolute;
+    left: 0;
+    top: 530px;
+}
+
+#section04 .rightbox .brand_id_img_4{
+    position: absolute;
+    right: 30px;
+    top: 860px;
+}
+
+#section04 .rightbox .brand_id_img_5{
+    position: absolute;
+    left: 100px;
+    top: 1330px;
+}
+
+#section04 .rightbox .brand_id_img_6{
+    position: absolute;
+    right: 0;
+    top: 18400px;
+}
