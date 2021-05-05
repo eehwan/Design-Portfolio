@@ -62,5 +62,5 @@
 
 #section06 .contents .serach_area_click.on{
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-2px);
 }

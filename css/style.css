@@ -1,24 +1,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 @import url(//db.onlinewebfonts.com/c/9a2bc11be56851dde98c1b49302cc21a?family=Gotham+Medium); */
-
-#flag{
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 99999;
-    pointer-events: none;
-}
-
-
-#flag > div{
-    opacity: 0;
-    transition: all .5s;
-}
-#flag.on > div{
-    opacity: 1;
-}
-
-
+/* video{
+    display:none;
+} */
 
 #mega{
     position: fixed;
@@ -39,6 +23,14 @@
     z-index: 999999;
 }
 
+.x_button{
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 90px;
+    top: 448px;
+}
+/* left_area */
 #mega #left_area{
     flex: 2;
     position: relative;
@@ -57,6 +49,10 @@
     align-items: center;
     border-bottom: 1px solid lightgray;
     box-sizing: border-box;
+    opacity: 0.7;
+}
+#left_area .menu_container > div:hover {
+    opacity: 1;
 }
 
 #left_area .menu_container > div:last-child{
@@ -96,22 +92,24 @@
     top: 242px;
 }
 
-.x_button{
-    width: 26px;
-    height: 26px;
-    position: absolute;
-    left: 90px;
-    top: 448px;
-}
-
-
+/* right_area */
 
 #mega #right_area{
     flex: 1;
     background-color: #000;
     position: relative;
 }
-
+#mega #right_area > div{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+#mega #right_area > div:first-child{
+    display: block;
+    z-index: 9999;
+}
 
 /*------------------------------------------------------------------------------------------------*/
 
@@ -144,7 +142,7 @@ body {
     position: relative;
 }
 
-.pop{
+/* .pop{
     position: fixed;
     left: 0;
     top: 0;
@@ -154,7 +152,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*display: none;*/
+    display: none;
     opacity: 0;
     z-index: -1;
     transition: all .5s;
@@ -167,4 +165,4 @@ body {
     width: 600px;
     height: 300px;
     background: #fff;
-}
+} */

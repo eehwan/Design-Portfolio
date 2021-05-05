@@ -23,6 +23,23 @@
     }
 }
 
+#flag_container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    pointer-events: none;
+}
+#flag {
+    position: relative;
+    display: none;
+    width: 154px;
+    height: 154px;
+    transition: all linear 0s 0s;
+}
+/* #flag > div{
+} */
+
 #section01 .left_box{
     flex: 1.5;
     background-color: #000;
@@ -116,7 +133,7 @@ svg clippath text {
     position: absolute;
     bottom: 80px;
     left: 430px;
-    animation-name: inside-out2;
+    animation-name: inside-out;
     animation-duration:1s;
     animation-iteration-count:1;
     /*animation-direction: alternate;*/
@@ -184,6 +201,9 @@ svg clippath text {
     top: 0;
     right: -104px;
     z-index: 3;
+}
+.left_slider .slider03 .inner > div {
+    cursor: pointer;
 }
 .left_slider .slider03 .preview-next_slider{
     width: 104px;

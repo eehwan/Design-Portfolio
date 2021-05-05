@@ -10,6 +10,7 @@
     top: 80px;
     right: 88px;
     z-index: 9999;
+    cursor: pointer;
 }
 
 .menu{
@@ -17,6 +18,7 @@
     top: 450px;
     left: 88px;
     z-index: 9999;
+    cursor: pointer;
 }
 
 .lng{
@@ -24,6 +26,7 @@
     left: 88px;
     bottom:80px;
     z-index: 9999;
+    cursor: pointer;
 }
 
 .topbutton{
@@ -31,4 +34,5 @@
     right: 88px;
     bottom: 80px;
     z-index: 9999;
+    cursor: pointer;
 }
