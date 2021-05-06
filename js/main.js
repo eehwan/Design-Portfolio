@@ -31,36 +31,60 @@ window.addEventListener('DOMContentLoaded', () => {
 
     /* 스 크 롤 이 벤 트 영 역*/
     container.addListener((e) => {
-
         let scrollTop = container.scrollTop;
-        
+        const topmenu = document.querySelector(".topmenu"),
+            menu = document.querySelector(".menu"),
+            lng  = document.querySelector(".lng");
+        // section1
+        if(scrollTop < 980-200){
+            $('#section01').addClass('on');
+            topmenu.style.filter = "invert(0)";
+        }else{
+            $('#section01').removeClass('on');
+        }
         // section2
-        if(scrollTop >= 750 && scrollTop <=1520){
+        if(scrollTop >= 980-200 && scrollTop < (980*2)-200) {
             $('#section02').addClass('on');
+            topmenu.style.filter = "invert(100%)";
         }else{
             $('#section02').removeClass('on');
         }
         // section3
-        if(scrollTop >= 1520 && scrollTop <= 2500){
+        if(scrollTop >= (980*2)-200 && scrollTop < (980*3)-200){
             $('#section03').addClass('on');
+            topmenu.style.filter = "invert(100%)";
         }else{
             $('#section03').removeClass('on');
         }
         // section4
-        if(scrollTop >= 2500 && scrollTop <= 3200){
+        if(scrollTop >= (980*3)-200 && scrollTop < (980*4)-200){
             $('#section04').addClass('on');
+            menu.style.filter = "invert(100%)";
+            topmenu.style.filter = "invert(0)";
         }else{
             $('#section04').removeClass('on');
+            menu.style.filter = "invert(0)";
+        }
+        // section5
+        if(scrollTop >= (980*4)-200 && scrollTop < (980*5)-200){
+            $('#section05').addClass('on');
+            topmenu.style.filter = "invert(100%)";
+            lng.style.filter = "invert(100%)";
+        }else{
+            $('#section05').removeClass('on');
+            lng.style.filter = "invert(0)";
         }
         // section6
-        if(scrollTop >= 4000){
+        if(scrollTop >= (980*5)-200){
             $('#section06').addClass('on');
+            topmenu.style.filter = "invert(100%)";
+        }else{
+            $('#section06').removeClass('on');
         }
         // $('.box1').css('transform', `translateY(${scrollTop * 0.7}px)`)
     });
 
-
-    // 맨 위로
+    // 맨 위로 버튼
     $('.topbutton').click(function () {
         container.scrollTo(0, 0, 600, {
             callback: () => console.log('done!'),

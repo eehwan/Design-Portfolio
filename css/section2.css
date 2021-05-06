@@ -1,32 +1,28 @@
 
 #section02{
     background-size: cover;
-}
-
-
-#section02{
     position: relative;
 }
-
 #section02 .location_2{
     position: absolute;
     right: 98px;
     top: 450px;
 }
-
 #section02 .section02_all {
     position: absolute;
     top: -50px;
 }
 
-
+/* left_box */
 #section02 .section02_all .left_box{
     position: absolute;
     z-index: 1;
     left: 298px;
     top: 250px;
 }
-
+#section2 .left_box #NEW{
+    padding: 10px;
+}
 #section02 .left_box .left_txt_slider{
     width: 543px;
     height: 685px;
@@ -36,23 +32,25 @@
     transition: all 1s;
     /*transition-delay: 1s;*/
 }
-
 #section02.on .left_box .left_txt_slider{
     transform: translateX(0);
     opacity: 1;
 }
-
-
 #section02 .button_slider{
     width: 223px;
     height: 46px;
     position: relative;
 }
-
 .bezero1_button{
     padding-left: 30px;
+    cursor: pointer;
+}
+.bezero1_button:hover{
+    filter: invert(100%);
 }
 
+
+/* right_box */
 #section02 .section02_all .center_box {
     position: absolute;
     left: 610px;
@@ -81,6 +79,23 @@
     position: absolute;
     left: 890px;
     top: 130px;
+    display: flex;
+    flex-direction: row;
+}
+#section02 .section02_all .center_box .bezero1_pre_next >button{
+    all: unset;
+    font-size: 12px;
+    padding: 15px;
+    cursor: pointer;
+    color: rgb(180,180,180);
+}
+#section02 .section02_all .center_box .bezero1_pre_next >button:hover{
+    font-weight: bolder;
+    filter: invert(1);
+    text-decoration: underline;
+}
+#section02 .section02_all .center_box .bezero1_pre_next >button:active{
+    transform: translate(1px, 1px);
 }
 
 

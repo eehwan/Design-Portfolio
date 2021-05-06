@@ -204,7 +204,7 @@ svg clippath text {
     z-index: 3;
     cursor: pointer;
 }
-.left_slider .slider03 .preview-next_slider{
+.left_slider .slider03 .prev-next_slider{
     width: 104px;
     height: 280px;
     position: relative;
@@ -214,27 +214,30 @@ svg clippath text {
     align-items: center;
     transition: all .5s .2s;
 }
+.left_slider .slider03 .prev-next_slider img{
+    padding: 10px;
+}
 
-.left_slider .slider03 .preview-next_slider .inner >div.preview_hover{
+.left_slider .slider03 .prev-next_slider .inner >div.prev_hover{
     opacity:.5;
     transition: all .5s;
 }
 
-.left_slider .slider03 .preview-next_slider .inner >div.preview_hover:hover{
+.left_slider .slider03 .prev-next_slider .inner >div.prev_hover:hover{
     opacity:1;
 }
 
-.left_slider .slider03 .preview-next_slider .inner >div.next_hover{
+.left_slider .slider03 .prev-next_slider .inner >div.next_hover{
     opacity:.5;
     transition: all .5s;
 }
 
-.left_slider .slider03 .preview-next_slider .inner >div.next_hover:hover{
+.left_slider .slider03 .prev-next_slider .inner >div.next_hover:hover{
     opacity:1;
 }
 
 
-.left_slider .slider03 .preview-next_slider .inner .preview_hover{
+.left_slider .slider03 .prev-next_slider .inner .preview_hover{
     margin-bottom: 20px;
 }
 
