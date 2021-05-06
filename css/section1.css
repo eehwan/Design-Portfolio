@@ -1,4 +1,4 @@
-@-webkit-keyframes inside-out {
+@keyframes inside-out {
     0% {
         /*left:-300px;*/
         transform: translateX(-30px);
@@ -10,7 +10,7 @@
     }
 }
 
-@-webkit-keyframes inside-out2{
+@keyframes inside-out2{
     0% {
         /*bottom:-300px;*/
         transform: translateX(-30px);
@@ -148,6 +148,7 @@ svg clippath text {
     top: 40px;
     left: -200px;
     z-index: 2;
+    cursor: pointer;
 }
 
 .left_slider .slider01 .button_slider{
@@ -176,7 +177,7 @@ svg clippath text {
 }
 
 .left_slider .slider01 .button_slider:hover .button_1{
-    -webkit-filter: invert(100%)!important;
+    filter: invert(100%)!important;
 }
 
 /*overflow 하려고 만든 클래스*/
@@ -201,8 +202,6 @@ svg clippath text {
     top: 0;
     right: -104px;
     z-index: 3;
-}
-.left_slider .slider03 .inner > div {
     cursor: pointer;
 }
 .left_slider .slider03 .preview-next_slider{
