@@ -20,8 +20,15 @@
     left: 298px;
     top: 250px;
 }
-#section2 .left_box #NEW{
-    padding: 10px;
+#section2 #NEW{
+    padding: 15px;
+    transform: translateX(-500px);
+    opacity: 0;
+    transition: all 1s;
+}
+#section2.on #NEW{
+    transform: translateX(0);
+    opacity: 1;
 }
 #section02 .left_box .left_txt_slider{
     width: 543px;
@@ -50,13 +57,13 @@
 }
 
 
+
 /* right_box */
 #section02 .section02_all .center_box {
     position: absolute;
     left: 610px;
     top: 178px;
 }
-
 
 .center_img_slider{
     width: 848px;
@@ -71,9 +78,7 @@
 #section02.on .center_img_slider{
     transform: translateY(-30px);
     opacity: 1;
-
 }
-
 
 #section02 .section02_all .center_box .bezero1_pre_next{
     position: absolute;
@@ -101,7 +106,6 @@
 
 #section02 .right_box{
     position: absolute;
-    /* left: 700px; */
     right: 0;
     top: 300px;
     transform: translateX(500px);
@@ -109,10 +113,13 @@
     transition: all 1s;
     transition-delay: .2s;
 }
-
 #section02.on .right_box{
     transform: translateX(0);
     opacity: 1;
+}
+/* img별 크기 차이로 생기는 여백 없애기 */
+#section02.on .right_box .right_txt_area >img{
+    transform: translateX(calc(154px - 100%));
 }
 
 
