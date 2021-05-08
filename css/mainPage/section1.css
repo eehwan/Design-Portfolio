@@ -1,6 +1,5 @@
 @keyframes inside-out {
     0% {
-        /*left:-300px;*/
         transform: translateX(-30px);
         opacity: 0;
     }
@@ -10,59 +9,48 @@
     }
 }
 
-@keyframes inside-out2{
-    0% {
-        /*bottom:-300px;*/
-        transform: translateX(-30px);
-        opacity: 0;
-    }
-    100% {
-        /*bottom:30px;*/
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-#flag_container{
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 99999;
-    pointer-events: none;
-}
 #flag {
     position: relative;
-    display: none;
+    opacity: 0;
     width: 154px;
     height: 154px;
     transition: all linear 0s 0s;
 }
-/* #flag > div{
-} */
+#section01 {
+    transition: all 1s;
+}
+#section01 .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../main-main_visual/baroco_pattern_.jpg");
+    background-size: cover;
+    opacity: 0;
+    transition: all 1s;
+}
+#section01.on .background{
+    opacity: 1;
+}
 
 #section01 .left_box{
     flex: 1.5;
-    background-color: #000;
-    background-size: cover;
-    background-image: url("../../main-main_visual/baroco_pattern_.jpg");
     position: relative;
 }
-
-
 #section01 .left_box .top{
     width: 700px;
     height: 270px;
     position: absolute;
     left: 230px;
     top: 250px;
-    animation-name: inside-out;
+}
+#section01.on .left_box .top{
+    animation: inside-out;
     animation-duration:1s;
     animation-iteration-count:1;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
     /*animation-direction: alternate;*/
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
 }
-
 
 #section01 .left_box .top .collection_txt{
     width: 360px;
@@ -89,7 +77,6 @@
 .svg-clip.on{
     opacity: 1;
 }
-
 .collection_txt svg{
     /*width: 100%;*/
     /*height: 100%;*/
@@ -97,8 +84,6 @@
     left: 0;
     top: 0;
 }
-
-
 svg clippath text {
     font-size: 86px;
 }
@@ -129,10 +114,15 @@ svg clippath text {
     opacity: 1;
 }
 
-.left_slider{
+
+
+/* left slider ----------------------------------------------------------------------- */
+#section01 .left_slider{
     position: absolute;
     bottom: 80px;
     left: 430px;
+}
+#section01.on .left_slider{   
     animation-name: inside-out;
     animation-duration:1s;
     animation-iteration-count:1;
@@ -140,9 +130,6 @@ svg clippath text {
     animation-delay: 0.7s;
     animation-fill-mode: both;
 }
-
-
-/* left slider ----------------------------------------------------------------------- */
 .left_slider .slider01{
     position: absolute;
     top: 40px;
@@ -227,44 +214,25 @@ svg clippath text {
     opacity:1;
 }
 
-.left_slider .slider03 .prev-next_slider .inner >div.next_hover{
-    opacity:.5;
-    transition: all .5s;
-}
-
-.left_slider .slider03 .prev-next_slider .inner >div.next_hover:hover{
-    opacity:1;
-}
 
 
-.left_slider .slider03 .prev-next_slider .inner .preview_hover{
-    margin-bottom: 20px;
-}
-
-/* ----------------------------------------------------------------------- */
-
-
-
-
-
+/* right_box */
 #section01 .right_box{
-    flex: 1.1;
-    background-color: #666;
+    opacity: 0;
+    transition: opacity 1s;
 }
-
-
+#section01.on .right_box{
+    opacity: 1;
+}
 #right_slider{
     width: 812px;
     height: 100vh;
     position: relative;
 }
-
-
 #section01 .right_box .dark-area_1{
     position: absolute;
     right: 0;
     top: 0;
     transform: translateX(40%);
     z-index: 2;
-
 }

@@ -7,11 +7,15 @@
     position: absolute;
     right: 98px;
     top: 450px;
+    z-index: 1;
 }
 #section02 .section02_all {
     position: absolute;
     top: -50px;
+    width: 100%;
+    z-index: 0;
 }
+
 
 /* left_box */
 #section02 .section02_all .left_box{
@@ -58,7 +62,7 @@
 
 
 
-/* right_box */
+/* center_box */
 #section02 .section02_all .center_box {
     position: absolute;
     left: 610px;
@@ -105,10 +109,11 @@
 }
 
 
+/* right_box */
 #section02 .right_box{
     position: absolute;
-    right: 0;
-    top: 300px;
+    right: 200px;
+    top: 500px;
     transform: translateX(500px);
     opacity: 0;
     transition: all 1s;

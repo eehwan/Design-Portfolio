@@ -14,9 +14,13 @@
 .menu{
     position: fixed;
     top: 450px;
-    left: 88px;
+    left: 78px;
+    padding: 10px;
     z-index: 9999;
     cursor: pointer;
+}
+.menu:hover >img{
+    transform: scale(1.03);
 }
 .lng{
     position: fixed;

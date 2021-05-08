@@ -1,7 +1,3 @@
-/*왜깨졌쥐?^?^*/
-/*왜깨졌쥐?^?^*/
-/*왜깨졌쥐?^?^*/
-
 #section05 .locaitno_5{
     position: absolute;
     right: 98px;
@@ -15,6 +11,11 @@
     left: 50%;
     top: 100px;
     transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+#section05.on .title_txt{
+    opacity: 1;
 }
 
 
@@ -31,8 +32,6 @@
     text-align: center;
     z-index: 111;
 }
-
-
 #section05 .container > div{
     position: relative;
     width:401px;
@@ -49,41 +48,41 @@
     transition-delay: 0;
 }
 #section05.on .container > div:nth-child(2){
+    top: -70px;
     transition-delay: .3s;
 }
 #section05.on .container > div:nth-child(3){
     transition-delay: .5s;
 }
 
-#section05 .box:nth-child(2){
-    top: -70px;
-}
 
 #section05 .container .bg{
     position: relative;
     z-index: 10;
     overflow: hidden;
 }
-
 #section05 .container > div .bg img{
     transition: all 1s;
 }
-
 #section05 .container > div:hover .bg img{
     transform: scale(1.3);
 }
 
 
-#section05 .container .shadow{
+#section05 .container >div .shadow{
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10px;
+    top: 10px;
     background: rgba(0,0,0,1);
-    transform: translate(30px,30px);
+    opacity: 0;
+    transition: all 0.6s;
 }
-
+#section05 .container >div:hover .shadow{
+    opacity: 1;
+    transform: translate(20px, 20px);
+}
 
 #section05 .container > div .overlay{
     width: 100%;
@@ -92,43 +91,89 @@
     left: 0;
     top: 0;
     background: rgba(0,0,0,0);
-    transition: all 1s;
+    transition: background 1s;
     z-index: 20;
 }
-
-
 #section05 .container > div:hover .overlay{
     background: rgba(0,0,0,0.6);
 }
 
 
-#section05 .container > div .txt{
+#section05 .container > .box .txt{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 30;
 }
-#section05 .container > div .txt .line-cover{
+#section05 .container > .box .txt .line-cover{
     height: 270px;
     width: 2px;
     margin: 30px auto;
 }
-#section05 .container > div .txt .line-cover .line{
+#section05 .container > .box .txt .line-cover .line{
     width: 100%;
     height: 0;
     background: #fff;
+    z-index: 50;
     transition: all 1s;
 }
-#section05 .container > div .txt .line-cover .line{
+#section05 .container > .box:hover .txt .line-cover .line{
     height: 270px;
 }
 #section05 .container >.box >.txt >div:last-child >img{
-    margin: auto;
+    margin: 15px auto;
 }
 
 
-#section05 .container .box_1 .view{
+/* bg_letters */
+#section05 .bg_letters {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+#section05 .bg_letters .b {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#section05 .bg_letters .v {
+    position: absolute;
+    left: 88px;
+    top: 710px;
+}
+#section05 .bg_letters .l {
+    position: absolute;
+    left: 440px;
+    top: 50px;
+}
+#section05 .bg_letters .g {
+    position: absolute;
+    left: 800px;
+    top: 714px;
+}
+#section05 .bg_letters .a {
+    position: absolute;
+    left: 1400px;
+    top: 0;
+}
+#section05 .bg_letters .r {
+    position: absolute;
+    left: 1700px;
+    top: 660px;
+}
+#section05 .bg_letters .i {
+    position: absolute;
+    left: 2300px;
+    top: 148px;
+}
+
+
+/*  
+#section05 .container .box .view_1{
     position: absolute;
     left: 138px;
     top: 406px;
@@ -179,7 +224,6 @@
     width: 98%;
     height: 98.5%;
     background: rgba(0,0,0,0.6);
-    /*backdrop-filter: blur(6px);*/
     border: 4px solid #b8b8b8;
     position: absolute;
     left: 0;
@@ -245,50 +289,4 @@
     left: 30px;
     top: 30px;
     z-index: -1;
-}
-
-
-/* bg_letters */
-#section05 .bg_letters {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
-#section05 .bg_letters .b {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-#section05 .bg_letters .v {
-    position: absolute;
-    left: 88px;
-    top: 710px;
-}
-#section05 .bg_letters .l {
-    position: absolute;
-    left: 440px;
-    top: 50px;
-}
-#section05 .bg_letters .g {
-    position: absolute;
-    left: 800px;
-    top: 714px;
-}
-#section05 .bg_letters .a {
-    position: absolute;
-    left: 1400px;
-    top: 0;
-}
-#section05 .bg_letters .r {
-    position: absolute;
-    left: 1700px;
-    top: 660px;
-}
-#section05 .bg_letters .i {
-    position: absolute;
-    left: 2300px;
-    top: 148px;
-}
+} */

@@ -30,43 +30,49 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     /* 스 크 롤 이 벤 트 영 역*/
+    // const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
+        logo = document.querySelector(".logo"),
+        topmenu = document.querySelector(".topmenu"),
+        menu = document.querySelector(".menu"),
+        lng  = document.querySelector(".lng");
+
     container.addListener((e) => {
         let scrollTop = container.scrollTop;
-        const topmenu = document.querySelector(".topmenu"),
-            menu = document.querySelector(".menu"),
-            lng  = document.querySelector(".lng");
         // section1
-        if(scrollTop < 980-200){
+        if(scrollTop < vh-0.2*vh){
             $('#section01').addClass('on');
             topmenu.style.filter = "invert(0)";
         }else{
             $('#section01').removeClass('on');
         }
         // section2
-        if(scrollTop >= 980-200 && scrollTop < (980*2)-200) {
+        if(scrollTop >= vh-0.2*vh && scrollTop < (vh*2)-0.2*vh) {
             $('#section02').addClass('on');
             topmenu.style.filter = "invert(100%)";
         }else{
             $('#section02').removeClass('on');
         }
         // section3
-        if(scrollTop >= (980*2)-200 && scrollTop < (980*3)-200){
+        if(scrollTop >= (vh*2)-0.2*vh && scrollTop < (vh*3)-0.2*vh){
             $('#section03').addClass('on');
             topmenu.style.filter = "invert(100%)";
         }else{
             $('#section03').removeClass('on');
         }
         // section4
-        if(scrollTop >= (980*3)-200 && scrollTop < (980*4)-200){
+        if(scrollTop >= (vh*3)-0.2*vh && scrollTop < (vh*4)-0.2*vh){
             $('#section04').addClass('on');
+            logo.style.filter = "invert(100%)";
             menu.style.filter = "invert(100%)";
             topmenu.style.filter = "invert(0)";
         }else{
             $('#section04').removeClass('on');
+            logo.style.filter = "invert(0)";
             menu.style.filter = "invert(0)";
         }
         // section5
-        if(scrollTop >= (980*4)-200 && scrollTop < (980*5)-200){
+        if(scrollTop >= (vh*4)-0.2*vh && scrollTop < (vh*5)-0.2*vh){
             $('#section05').addClass('on');
             topmenu.style.filter = "invert(100%)";
             lng.style.filter = "invert(100%)";
@@ -75,7 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
             lng.style.filter = "invert(0)";
         }
         // section6
-        if(scrollTop >= (980*5)-200){
+        if(scrollTop >= (vh*5)-0.2*vh){
             $('#section06').addClass('on');
             topmenu.style.filter = "invert(100%)";
         }else{
@@ -93,8 +99,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Section1 flag
-    const $flag =  $("#flag"),
-        flag =  document.querySelector("#flag"),
+    const flag =  document.querySelector("#flag"),
         play_hover = document.querySelector(".play_hover");
     const flagWidth = 77,
         flagHeight = 77;
@@ -112,7 +117,7 @@ window.addEventListener('DOMContentLoaded', () => {
         flag.style.top = `${dy -flagHeight}px`;
     }
     play_hover.addEventListener('mouseenter', (e) => {
-        flag.style.display = "block";
+        flag.style.opacity = "1";
         flag.style.left = `${e.pageX-flagWidth}px`;
         flag.style.top = `${e.pageY -flagHeight}px`;
     });
@@ -125,16 +130,17 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
     play_hover.addEventListener('mouseleave', (e) => {
-        flag.style.display = "none";
+        flag.style.opacity = "0";
     });
         
 
     // 메뉴창
+    const mega = document.querySelector("#mega");
     $('.menu').click(function () {
-        $('#mega').addClass('on');
+        mega.classList.add('on');
     })
     $('.x_button').click(function () {
-        $('#mega').removeClass('on');
+        mega.classList.remove('on');
     })
     // 검색창
     $('.search_area_click').click(function () {

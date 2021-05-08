@@ -24,11 +24,13 @@
     <script src="js/plugin/easing.js"></script>
 </head>
 <body>
-    <div class="logo"><img src="./main-main_visual/bvlgari_logo.png" alt="logo"></div>
-    <div class="topmenu"><img src="./main-main_visual/topmenu_entire.png" alt="topmenu"></div>
-    <div class="menu"><img src="./main-main_visual/hamburger_menu.png" alt="menu"></div>
-    <div class="lng"><img src="./main-main_visual/language.png" alt="lng"></div>
-    <div class="topbutton"><img src="main-sec_4-6/topbutton.png" alt=""></div>
+    <div class="mainBtns">
+        <div class="logo"><img src="./main-main_visual/bvlgari_logo.png" alt="logo"></div>
+        <div class="topmenu"><img src="./main-main_visual/topmenu_entire.png" alt="topmenu"></div>
+        <div class="menu"><img src="./main-main_visual/hamburger_menu.png" alt="menu"></div>
+        <div class="lng"><img src="./main-main_visual/language.png" alt="lng"></div>
+        <div class="topbutton"><img src="main-sec_4-6/topbutton.png" alt=""></div>
+    </div>
     
 <div id="mega">
     <div id="left_area">
@@ -83,7 +85,7 @@
     
 </div>
 
-<div id="flag_container">
+<div id="cursor">
     <div id="flag">
         <div><img src="main-main_visual/arabesque_play%20button_hover.png" alt=""></div>
         <div><img src="main-main_visual/mosaico_playbutton_hover.png" alt=""></div>
@@ -92,7 +94,8 @@
 </div>
 
 <section id="container">
-    <section class="section" id="section01">
+    <section class="section on" id="section01">
+        <div class="background"></div>
         <div class="left_box">
             <div class="top">
                 <div class="text"><img src="main-main_visual/barocko_txt_area.png" alt=""></div>
@@ -158,23 +161,13 @@
 
             <div id="right_slider">
                 <div>
-                    <video autoplay muted loop>
-                        <source src="main-main_visual/arabesque-mov.mp4" type="video/mp4">
-                    </video>
-<!--                    <img src="main-main_visual/baroque_movarea_1.jpg" alt="">-->
-
+                    <video autoplay muted loop src="main-main_visual/arabesque-mov.mp4"></video>
                 </div>
                 <div>
-<!--                    <img src="main-main_visual/mosaico_movarea_1.jpg" alt="">-->
-                    <video autoplay muted loop>
-                        <source src="main-main_visual/mosaico-mov.mp4" type="video/mp4">
-                    </video>
+                    <video autoplay muted loop src="main-main_visual/mosaico-mov.mp4"></video>
                 </div>
                 <div>
-<!--                    <img src="main-main_visual/ladycollection_movarea_1.jpg" alt="">-->
-                    <video autoplay muted loop>
-                        <source src="main-main_visual/ladycollection-mov.mp4" type="video/mp4">
-                    </video>
+                    <video autoplay muted loop src="main-main_visual/ladycollection-mov.mp4"></video>
                 </div>
             </div>
 
@@ -226,19 +219,18 @@
                     <img src="./main-sec_1-3/preview-next-txt_area.jpg" alt=""> -->
                 </div>
 
-                <div class="right_box">
-                    <div class="right_txt_slider">
-                        <div class="right_txt_area"><img src="main-sec_1-3/bezero1_right_txt.jpg" alt=""></div>
-                        <div class="right_txt_area"><img src="main-sec_1-3/fiorever_right_txt.jpg" alt=""></div>
-                        <div class="right_txt_area"><img src="main-sec_1-3/serpenti_right_txt.jpg" alt=""></div>
-                    </div>
-
-                    <!-- 크기 위치 개수 스크립트 -->
-                    <div class="bezero1_img_2" id="sc02_slider_small">
-                        <div><img src="./main-sec_1-3/bezero1_img_2.jpg" alt=""></div>
-                        <div><img src="./main-sec_1-3/fiorever_img2.jpg" alt=""></div>
-                        <div><img src="./main-sec_1-3/serpenti_img2.jpg" alt=""></div>
-                    </div>
+            </div>
+            <div class="right_box">
+                <div class="right_txt_slider">
+                    <div class="right_txt_area"><img src="main-sec_1-3/bezero1_right_txt.jpg" alt=""></div>
+                    <div class="right_txt_area"><img src="main-sec_1-3/fiorever_right_txt.jpg" alt=""></div>
+                    <div class="right_txt_area"><img src="main-sec_1-3/serpenti_right_txt.jpg" alt=""></div>
+                </div>
+                <!-- 크기 위치 개수 스크립트 -->
+                <div class="bezero1_img_2" id="sc02_slider_small">
+                    <div><img src="./main-sec_1-3/bezero1_img_2.jpg" alt=""></div>
+                    <div><img src="./main-sec_1-3/fiorever_img2.jpg" alt=""></div>
+                    <div><img src="./main-sec_1-3/serpenti_img2.jpg" alt=""></div>
                 </div>
             </div>
         </div>
@@ -248,50 +240,6 @@
     <section class="section" id="section03">
         <div class="location_3"><img src="main-sec_1-3/location_3.png" alt=""></div>
         <div class="title"><img src="main-sec_1-3/all_best_seller_txt.png" alt=""></div>
-
-        <div class="boxes_container">
-
-            <div>
-                <div class="box_1">
-                    <div class="line"></div>
-                    <div class="shadow"></div>
-                    <div class="overlay_1"></div>
-                    <img src="main-sec_1-3/bestseller-fashion_img.jpg" class="img_1" alt="">
-                    <img src="main-sec_1-3/bulgari_fashion_hover.png" class="font_1" alt="">
-                </div>
-
-                <div class="bulgari_fashion"><img src="main-sec_1-3/bulgari-fashion_txt.jpg" alt=""></div>
-            </div>
-
-
-            <div class="center">
-
-                <div class="box_1">
-                    <div class="line"></div>
-                    <div class="shadow"></div>
-                    <div class="overlay_1"></div>
-                    <img src="main-sec_1-3/bestseller-jewerly_iimg.jpg" class="img_1" alt="">
-                    <img src="main-sec_1-3/bulgari_jewerly_hover.png" class="font_1" alt="">
-                </div>
-                <div class="bulgari_jewerly"><img src="main-sec_1-3/bulgari-jewerly_txt.jpg" alt=""></div>
-
-            </div>
-
-
-            <div>
-                <div class="box_1">
-                    <div class="line"></div>
-                    <div class="shadow"></div>
-                    <div class="overlay_1"></div>
-                    <img src="main-sec_1-3/bestseller-perfume_img.jpg" class="img_1" alt="">
-                    <img src="main-sec_1-3/bulgari_perfume_hover.png" class="font_1" alt="">
-                </div>
-
-                <div class="bulgari_perfume"><img src="main-sec_1-3/bulgari-perfume_txt.jpg" alt=""></div>
-            </div>
-
-        </div>
-
 
         <div class="bg_letters">
             <div class="b"><img src="main-sec_1-3/b.jpg" alt=""></div>
@@ -303,11 +251,45 @@
             <div class="i"><img src="main-sec_1-3/i.jpg" alt=""></div>
         </div>
 
+        <div class="container">
+            <div>
+                <div class="box">
+                    <div class="line"></div>
+                    <div class="shadow"></div>
+                    <div class="overlay"></div>
+                    <img src="main-sec_1-3/bestseller-fashion_img.jpg" class="img" alt="">
+                    <img src="main-sec_1-3/bulgari_fashion_hover.png" class="font" alt="">
+                </div>
+
+                <div class="under_txt"><img src="main-sec_1-3/bulgari-fashion_txt.jpg" alt=""></div>
+            </div>
+            <div class>
+                <div class="box">
+                    <div class="line"></div>
+                    <div class="shadow"></div>
+                    <div class="overlay"></div>
+                    <img src="main-sec_1-3/bestseller-jewerly_iimg.jpg" class="img" alt="">
+                    <img src="main-sec_1-3/bulgari_jewerly_hover.png" class="font" alt="">
+                </div>
+                <div class="under_txt"><img src="main-sec_1-3/bulgari-jewerly_txt.jpg" alt=""></div>
+            </div>
+            <div>
+                <div class="box">
+                    <div class="line"></div>
+                    <div class="shadow"></div>
+                    <div class="overlay"></div>
+                    <img src="main-sec_1-3/bestseller-perfume_img.jpg" class="img" alt="">
+                    <img src="main-sec_1-3/bulgari_perfume_hover.png" class="font" alt="">
+                </div>
+                <div class="under_txt"><img src="main-sec_1-3/bulgari-perfume_txt.jpg" alt=""></div>
+            </div>
+        </div>
+
     </section>
 
 
     <section class="section" id="section04">
-        <div class="bg"><img src="main-sec_4-6/brand_bg.jpg" alt=""></div>
+        <div class="background"></div>
 
         <div class="scroller"><img src="main-sec_4-6/Scroller%20line.png" alt="">
             <div class="scroller_point"><img src="main-sec_4-6/Scroller.png" alt=""></div>
@@ -382,12 +364,9 @@
                 <div class="txt">
                     <div><img src="main-sec_4-6/bulgari-hotel-in-rome_txt.png" alt=""></div>
                     <div class="line-cover"><div class="line"></div></div>
-                    <div><img src="main-sec_4-6/story_view_button.png" alt=""></div>
+                    <div class="view"><img src="main-sec_4-6/story_view_button.png" alt=""></div>
                 </div>
-
-
             </div>
-
             <div class="box">
                 <div class="shadow"></div>
                 <div class="overlay"></div>
@@ -397,11 +376,9 @@
                 <div class="txt">
                     <div><img src="main-sec_4-6/innovating-bulgari_txt.png" alt=""></div>
                     <div class="line-cover"><div class="line"></div></div>
-                    <div><img src="main-sec_4-6/story_view_button.png" alt=""></div>
+                    <div class="view"><img src="main-sec_4-6/story_view_button.png" alt=""></div>
                 </div>
-
             </div>
-
             <div class="box">
                 <div class="shadow"></div>
                 <div class="overlay"></div>
@@ -409,11 +386,12 @@
                 <div class="bg"><img src="main-sec_4-6/story_virus-freefuture_img.jpg" alt=""></div>
 
                 <div class="txt">
-                    <div><img src="main-sec_4-6/innovating-bulgari_txt.png" alt=""></div>
+                    <div><img src="main-sec_4-6/virus-free-future_txt.png" alt=""></div>
                     <div class="line-cover"><div class="line"></div></div>
-                    <div><img src="main-sec_4-6/story_view_button.png" alt=""></div>
+                    <div class="view"><img src="main-sec_4-6/story_view_button.png" alt=""></div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -452,7 +430,7 @@
 <script src="js/plugin/scrollTrigger.js"></script>
 <script src="js/scrollbar.js"></script>
 <script src="js/main.js"></script>
-<script src="js/menuImg.js"></script>
+<script src="js/menuIMG.js"></script>
 <script src="js/mainPage/sc1Slick.js"></script>
 <script src="js/mainPage/sc2Slick.js"></script>
 <script src="js/mainPage/player.js"></script>
