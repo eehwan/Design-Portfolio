@@ -209,14 +209,14 @@ svg clippath text {
     padding: 10px;
 }
 
-.left_slider .slider03 .prev-next_slider .inner >div.prev_hover{
+.left_slider .slider03 .prev-next_slider .inner >div{
     opacity:.5;
     transition: all .5s;
 }
-
-.left_slider .slider03 .prev-next_slider .inner >div.prev_hover:hover{
+.left_slider .slider03 .prev-next_slider .inner >div:hover{
     opacity:1;
 }
+
 
 
 
