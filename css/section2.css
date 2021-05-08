@@ -20,14 +20,14 @@
     left: 298px;
     top: 250px;
 }
-#section2 #NEW{
-    padding: 15px;
+#section02 #NEW{
+    padding: 10px 30px;
     transform: translateX(-500px);
     opacity: 0;
     transition: all 1s;
 }
-#section2.on #NEW{
-    transform: translateX(0);
+#section02.on #NEW{
+    transform: translateX(0px);
     opacity: 1;
 }
 #section02 .left_box .left_txt_slider{
