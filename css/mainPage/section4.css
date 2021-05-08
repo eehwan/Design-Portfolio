@@ -19,16 +19,21 @@
     transform: translateY(100px);
     transition: all 1s;
 }
-
 #section04.on .background{
     opacity: 1;
     transform: translateY(0);
 }
 
+
 #section04 .scroller{
     position: absolute;
     left: 1020px;
     top: 160px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#section04.on .scroller{
+    opacity: 1;
 }
 #section04 .scroller_point{
     position: absolute;

@@ -121,6 +121,10 @@ svg clippath text {
     position: absolute;
     bottom: 80px;
     left: 430px;
+    opacity: 0;
+}
+#section01.on .left_slider{
+    opacity: 1;
 }
 #section01.on .left_slider{   
     animation-name: inside-out;
