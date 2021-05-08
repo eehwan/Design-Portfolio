@@ -137,7 +137,7 @@ window.addEventListener('DOMContentLoaded', () => {
         $('#mega').removeClass('on');
     })
     // 검색창
-    $('.search_area').click(function () {
+    $('.search_area_click').click(function () {
         $('.serach_area_click').toggleClass('on');
     })
    
