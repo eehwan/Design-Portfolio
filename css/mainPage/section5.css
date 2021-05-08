@@ -33,19 +33,31 @@
 }
 
 
-
-
 #section05 .container > div{
     position: relative;
     width:401px;
     height: 560px;
-
+    transform: translateX(500px);
+    opacity: 0;
+}
+#section05.on .container > div{
+    transform: translateX(0);
+    transition: all .5s ease-in-out;
+    opacity: 1;
+}
+#section05.on .container > div:nth-child(1){
+    transition-delay: 0;
+}
+#section05.on .container > div:nth-child(2){
+    transition-delay: .3s;
+}
+#section05.on .container > div:nth-child(3){
+    transition-delay: .5s;
 }
 
 #section05 .box:nth-child(2){
     top: -70px;
 }
-
 
 #section05 .container .bg{
     position: relative;
@@ -97,25 +109,23 @@
     transform: translate(-50%, -50%);
     z-index: 30;
 }
-
 #section05 .container > div .txt .line-cover{
     height: 270px;
     width: 2px;
     margin: 30px auto;
-
 }
-
 #section05 .container > div .txt .line-cover .line{
     width: 100%;
     height: 0;
     background: #fff;
     transition: all 1s;
 }
-
-#section05 .container > div:hover .txt .line-cover .line{
+#section05 .container > div .txt .line-cover .line{
     height: 270px;
 }
-
+#section05 .container >.box >.txt >div:last-child >img{
+    margin: auto;
+}
 
 
 #section05 .container .box_1 .view{
@@ -238,6 +248,7 @@
 }
 
 
+/* bg_letters */
 #section05 .bg_letters {
     position: absolute;
     left: 0;
@@ -246,47 +257,36 @@
     justify-content: space-between;
     text-align: center;
 }
-
-
 #section05 .bg_letters .b {
     position: absolute;
     left: 0;
     top: 0;
 }
-
-
 #section05 .bg_letters .v {
     position: absolute;
     left: 88px;
     top: 710px;
 }
-
-
 #section05 .bg_letters .l {
     position: absolute;
     left: 440px;
     top: 50px;
 }
-
 #section05 .bg_letters .g {
     position: absolute;
     left: 800px;
     top: 714px;
 }
-
 #section05 .bg_letters .a {
     position: absolute;
     left: 1400px;
     top: 0;
 }
-
 #section05 .bg_letters .r {
     position: absolute;
     left: 1700px;
     top: 660px;
 }
-
-
 #section05 .bg_letters .i {
     position: absolute;
     left: 2300px;

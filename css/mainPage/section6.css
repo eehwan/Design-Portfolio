@@ -1,7 +1,15 @@
-
-#section06{
+#section06 .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-image: url("../../main-sec_4-6/find a store bg.jpg");
     background-size: cover;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+#section06.on .background{
+    opacity: 1;
 }
 
 #section06 .bottom_sec{
