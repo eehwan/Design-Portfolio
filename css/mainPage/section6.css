@@ -60,15 +60,26 @@
 #section06 .contents .find_a_store_txt{
     margin-bottom: 40px;
 }
-
-#section06 .contents .search_area .serach_area_click{
+#section06 .contents .search_area{
+    display: flex;
+    flex-direction: row;
+}
+#section06 .contents #searchInput{
+    all: unset;
+    width: 335px;
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 1.5px solid rgb(141,111,57);
+    font-size: 16px;
+}
+#section06 .contents #searchRecommand{
     /* display: none; */
     opacity: 0;
     transform: translateY(-20px);
     transition: all .5s;
     pointer-events: none;
 }
-#section06 .contents .search_area:hover .serach_area_click{
+#section06 .contents #searchRecommand.on{
     display: block;
     opacity: 1;
     transform: translateY(0);

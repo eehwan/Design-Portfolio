@@ -143,9 +143,15 @@ window.addEventListener('DOMContentLoaded', () => {
         mega.classList.remove('on');
     })
     // 검색창
-    $('.search_area_click').click(function () {
-        $('.serach_area_click').toggleClass('on');
-    })
+    const searchInput = document.querySelector('#searchInput'),
+        searchRecommand = document.querySelector('#searchRecommand'); 
+    searchInput.addEventListener('focus', () => {
+        searchRecommand.classList.add('on');
+    });
+    searchInput.addEventListener('blur', () => {
+        setTimeout(()=>searchRecommand.classList.remove('on'), 1000);
+    });
+
    
     /*
             gsap.to(".box2", {
