@@ -50,7 +50,7 @@ section{
 }
 
 
-
+/* changing */
 #section04 #changing{
     position: relative;
     width: 100%;
@@ -64,6 +64,7 @@ section{
     height: 100%;
     opacity: 0;
     z-index: 0;
+    transition: all 1s;
 }
 #section04 #changing.on1 .showing:nth-child(1){
     opacity: 1;
@@ -73,18 +74,19 @@ section{
     opacity: 1;
     z-index: 1;
 }
-#section04 #changing.on3 .showing:nth-child(1){
+#section04 #changing.on3 .showing:nth-child(3){
     opacity: 1;
     z-index: 1;
 }
-#section04 #changing.on4 .showing:nth-child(1){
+#section04 #changing.on4 .showing:nth-child(4){
     opacity: 1;
     z-index: 1;
 }
-#section04 #changing.on5 .showing:nth-child(1){
+#section04 #changing.on5 .showing:nth-child(5){
     opacity: 1;
     z-index: 1;
 }
+
 #section04 #changing .showing .title{
     position: absolute;
     display: flex;
@@ -98,7 +100,8 @@ section{
 #section04 #changing .showing .img_box{
     position: absolute;
     right: 200px;
-    height: 100vh;
+    bottom: 0;
+    height: 85vh;
     width: 600px;
     background-color: black;
     overflow: hidden;
@@ -110,6 +113,29 @@ section{
     min-height: 100%;
 }
 
+/* img_box >img */
+#section04 #changing.on1 .showing:nth-child(1) .img_box >img{
+    transform: scale(1.5) translate(-50px, -175px);
+    transition: all 1s ease-in-out .5s;
+}
+#section04 #changing.on2 .showing:nth-child(2) .img_box >img{
+    transform: scale(1.7) translate(5px, -100px);
+    transition: all 1s ease-in-out .5s;
+}
+#section04 #changing.on3 .showing:nth-child(3) .img_box >img{
+    transform: scale(1.5) translate(55px, -150px);
+    transition: all 1s ease-in-out .5s;
+}
+#section04 #changing.on4 .showing:nth-child(4) .img_box >img{
+    transform: scale(1.5) translate(-50px, -175px);
+    transition: all 1s ease-in-out .5s;
+}
+#section04 #changing.on5 .showing:nth-child(5) .img_box >img{
+    transform: scale(1.5) translate(-50px, -175px);
+    transition: all 1s ease-in-out .5s;
+}
+
+/* selector */
 #section04 #changing #selector{
     display: flex;
     flex-direction: row;
@@ -125,15 +151,68 @@ section{
     height: 400px;
     width: 196px;
     margin-right: 15px;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.6;
 }
 #section04 #changing #selector .selectee >*:first-child{
-    position: absolute;
-    top: 0;
+    transform: scale(0.85);
 }
-#section04 #changing #selector .selectee >*:last-child{
-    position: absolute;
-    bottom: 0;
+
+#section04 #changing.on1 #selector .selectee:nth-child(1){
+    opacity: 1;
 }
+#section04 #changing.on1 #selector .selectee:nth-child(1) >*:first-child{
+    transform: scale(1);
+}
+#section04 #changing.on1 #selector .selectee:nth-child(1) >*:last-child{
+    border: 1.5px solid black;
+}
+
+#section04 #changing.on2 #selector .selectee:nth-child(2){
+    opacity: 1;
+}
+#section04 #changing.on2 #selector .selectee:nth-child(2) >*:first-child{
+    transform: scale(1);
+}
+#section04 #changing.on2 #selector .selectee:nth-child(2) >*:last-child{
+    border: 1.5px solid black;
+}
+
+#section04 #changing.on3 #selector .selectee:nth-child(3){
+    opacity: 1;
+}
+#section04 #changing.on3 #selector .selectee:nth-child(3) >*:first-child{
+    transform: scale(1);
+}
+#section04 #changing.on3 #selector .selectee:nth-child(3) >*:last-child{
+    border: 1.5px solid black;
+}
+
+#section04 #changing.on4 #selector .selectee:nth-child(4){
+    opacity: 1;
+}
+#section04 #changing.on4 #selector .selectee:nth-child(4) >*:first-child{
+    transform: scale(1);
+}
+#section04 #changing.on4 #selector .selectee:nth-child(4) >*:last-child{
+    border: 1.5px solid black;
+}
+
+#section04 #changing.on5 #selector .selectee:nth-child(5){
+    opacity: 1;
+}
+#section04 #changing.on5 #selector .selectee:nth-child(5) >*:first-child{
+    transform: scale(1);
+}
+#section04 #changing.on5 #selector .selectee:nth-child(5) >*:last-child{
+    border: 1.5px solid black;
+}
+/*  */
+
+
+
+
 
 
 
