@@ -28,7 +28,7 @@ section{
 }
 .location_bar{
     position: absolute;
-    right: 10%;
+    right: 100px;
     top: calc(50% - 100px);
     z-index: 5;
 }
@@ -49,9 +49,93 @@ section{
     background-color: greenyellow;
 }
 
-#section04{
-    background-color: green;
+
+
+#section04 #changing{
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
+#section04 #changing .showing{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+}
+#section04 #changing.on1 .showing:nth-child(1){
+    opacity: 1;
+    z-index: 1;
+}
+#section04 #changing.on2 .showing:nth-child(2){
+    opacity: 1;
+    z-index: 1;
+}
+#section04 #changing.on3 .showing:nth-child(1){
+    opacity: 1;
+    z-index: 1;
+}
+#section04 #changing.on4 .showing:nth-child(1){
+    opacity: 1;
+    z-index: 1;
+}
+#section04 #changing.on5 .showing:nth-child(1){
+    opacity: 1;
+    z-index: 1;
+}
+#section04 #changing .showing .title{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 250px;
+    top: 150px;
+}
+#section04 #changing .showing .title >*{
+    margin-bottom: 30px;
+}
+#section04 #changing .showing .img_box{
+    position: absolute;
+    right: 200px;
+    height: 100vh;
+    width: 600px;
+    background-color: black;
+    overflow: hidden;
+}
+#section04 #changing .showing .img_box >img{
+    position: absolute;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#section04 #changing #selector{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 250px;
+    bottom: 150px;
+    z-index: 5;
+}
+#section04 #changing #selector .selectee{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 400px;
+    width: 196px;
+    margin-right: 15px;
+}
+#section04 #changing #selector .selectee >*:first-child{
+    position: absolute;
+    top: 0;
+}
+#section04 #changing #selector .selectee >*:last-child{
+    position: absolute;
+    bottom: 0;
+}
+
+
 
 #section05 .title{
     display: flex;
