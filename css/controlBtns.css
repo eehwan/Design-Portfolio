@@ -11,6 +11,9 @@
     z-index: 9999;
     cursor: pointer;
 }
+.topmenu.sub01{
+    filter: invert(1);
+}
 .menu{
     position: fixed;
     top: 450px;
