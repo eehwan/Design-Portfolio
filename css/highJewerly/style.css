@@ -91,7 +91,7 @@ section{
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: 250px;
+    left: 225px;
     top: 150px;
 }
 #section04 #changing .showing .title >*{
@@ -99,7 +99,7 @@ section{
 }
 #section04 #changing .showing .img_box{
     position: absolute;
-    right: 200px;
+    right: 180px;
     bottom: 0;
     height: 85vh;
     width: 600px;
@@ -109,29 +109,30 @@ section{
 #section04 #changing .showing .img_box >img{
     position: absolute;
     right: 0;
+    bottom: 0;
     min-width: 100%;
     min-height: 100%;
 }
 
 /* img_box >img */
 #section04 #changing.on1 .showing:nth-child(1) .img_box >img{
-    transform: scale(1.5) translate(-50px, -175px);
+    transform: scale(1.5) translate(-50px, -138px);
     transition: all 1s ease-in-out .5s;
 }
 #section04 #changing.on2 .showing:nth-child(2) .img_box >img{
-    transform: scale(1.7) translate(5px, -100px);
+    transform: scale(1.6) translate(5px, 0px);
     transition: all 1s ease-in-out .5s;
 }
 #section04 #changing.on3 .showing:nth-child(3) .img_box >img{
-    transform: scale(1.5) translate(55px, -150px);
+    transform: scale(1.5) translate(55px, -130px);
     transition: all 1s ease-in-out .5s;
 }
 #section04 #changing.on4 .showing:nth-child(4) .img_box >img{
-    transform: scale(1.5) translate(-50px, -175px);
+    transform: scale(1.5) translate(-50px, -138px);
     transition: all 1s ease-in-out .5s;
 }
 #section04 #changing.on5 .showing:nth-child(5) .img_box >img{
-    transform: scale(1.5) translate(-50px, -175px);
+    transform: scale(1.5) translate(-50px, -138px);
     transition: all 1s ease-in-out .5s;
 }
 
@@ -140,8 +141,8 @@ section{
     display: flex;
     flex-direction: row;
     position: absolute;
-    left: 250px;
-    bottom: 150px;
+    left: 225px;
+    top: 470px;
     z-index: 5;
 }
 #section04 #changing #selector .selectee{
@@ -153,10 +154,10 @@ section{
     margin-right: 15px;
     align-items: center;
     justify-content: space-between;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 #section04 #changing #selector .selectee >*:first-child{
-    transform: scale(0.85);
+    transform: scale(0.9);
 }
 
 #section04 #changing.on1 #selector .selectee:nth-child(1){
