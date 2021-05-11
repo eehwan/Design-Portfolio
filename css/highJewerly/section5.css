@@ -16,7 +16,7 @@
     right: 0;
     bottom: 0;
 }
-#section05 .context>div{
+#section05 .context >div{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -24,8 +24,31 @@
 #section05 .left{
     margin-right: 150px;
 }
-#section05 .context >div .txt{
+#section05 .context >div .text_box{
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     right: 200px;
+}
+
+#section05 .text_box .button{
+    position: absolute;
+    left: 60px;
+    bottom: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+#section05 .text_box .button:hover{
+    text-decoration: underline;
+    font-weight: 800;
+}
+#section05 .text_box .button .arrow{
+    position: relative;
+    top: calc(8px - 4px);
+    left: 27px;
+}
+#section05 .text_box .button:hover .arrow{
+    animation: arrowMove .7s ease-in-out infinite 0s;
 }
