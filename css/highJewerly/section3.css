@@ -1,0 +1,48 @@
+#section3 .background{
+    background-image: url(sub_high_jewerly/sec03/Barroco_pattern_bg.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+}
+#section03 .img_1{
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+}
+#section03 .img_2{
+    position: absolute;
+    left: 620px;
+    bottom: 0px;
+}
+#section03 .subtitle{
+    position: absolute;
+    left: 570px;
+    top: 280px;
+}
+
+#section03 .text_box {
+    position: absolute;
+    top: 305px;
+    right: 280px;
+}
+#section03 .text_box >img{
+    margin-bottom: 50px;
+}
+#section03 .text_box .button{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+}
+#section03 .text_box .button:hover{
+    filter: invert(1);
+}
+#section03 .text_box .button .arrow{
+    position: relative;
+    top: calc(23px - 4px);
+    right: 63px;
+}
+#section03 .text_box .button:hover .arrow{
+    animation: arrowMove .7s ease-in-out infinite 0s;
+}
