@@ -21,9 +21,10 @@
     padding: 10px;
     z-index: 9999;
     cursor: pointer;
+    transform: scale(0.995);
 }
-.menu:hover >img{
-    transform: scale(1.03);
+.menu:hover{
+    transform: scale(1.005);
 }
 .lng{
     position: fixed;

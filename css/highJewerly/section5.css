@@ -36,18 +36,19 @@
     bottom: 60px;
     font-size: 18px;
     font-weight: 500;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     cursor: pointer;
+    justify-content: center;
 }
 #section05 .text_box .button:hover{
     text-decoration: underline;
     font-weight: 800;
 }
 #section05 .text_box .button .arrow{
+    display: inline-block;
     position: relative;
-    top: calc(8px - 4px);
-    left: 24px;
+    bottom: 4px;
 }
 #section05 .text_box .button:hover .arrow{
     animation: arrowMove .7s ease-in-out infinite 0s;

@@ -22,27 +22,33 @@ topbutton.addEventListener('click', () => {
 // scroll control
 let wheeling = undefined;
 container.addEventListener('wheel', (e) => {
-    // scroll stop 감지
+    e.preventDefault();
+    // scroll start시 실행
+    // if(!wheeling){
+    //     console.log("start wheeling !");
+    // }
     clearTimeout(wheeling);
-    let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    // scroll stop시 실행
     wheeling = setTimeout(() => {
-      wheeling = undefined;
-  
-      //scroll down
-      if(e.wheelDelta < 0) {
-          container.scrollTo({
-              top: parseInt((container.scrollTop/vh)+1)*vh,
-              behavior: "smooth",
-          })
-      }
-      //scroll up
-      else {
-          container.scrollTo({
-              top: parseInt((container.scrollTop-1)/vh)*vh,
-              behavior: "smooth",
-          });
-      }
-    }, 250);
+        let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+        // console.log("stop wheeling !");
+        wheeling = undefined;
+    
+        //scroll down
+        if(e.wheelDelta < 0) {
+            container.scrollTo({
+                top: parseInt((container.scrollTop/vh)+1)*vh,
+                behavior: "smooth",
+            })
+        }
+        //scroll up
+        else {
+            container.scrollTo({
+                top: parseInt((container.scrollTop-1)/vh)*vh,
+                behavior: "smooth",
+            });
+        }
+    }, 100);
 });
 
 // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
