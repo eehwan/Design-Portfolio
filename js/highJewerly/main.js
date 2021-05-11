@@ -20,23 +20,29 @@ topbutton.addEventListener('click', () => {
 });
 
 // scroll control
-container.addEventListener('mousewheel', (e) => {
-    e.preventDefault();
+let wheeling = undefined;
+container.addEventListener('wheel', (e) => {
+    // scroll stop 감지
+    clearTimeout(wheeling);
     let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-    //scroll down
-    if(e.wheelDelta < 0) {
-        container.scrollTo({
-            top: parseInt((container.scrollTop/vh)+1)*vh,
-            behavior: "smooth",
-        })
-    }
-    //scroll up
-    else {
-        container.scrollTo({
-            top: parseInt((container.scrollTop-1)/vh)*vh,
-            behavior: "smooth",
-        });
-    }
+    wheeling = setTimeout(() => {
+      wheeling = undefined;
+  
+      //scroll down
+      if(e.wheelDelta < 0) {
+          container.scrollTo({
+              top: parseInt((container.scrollTop/vh)+1)*vh,
+              behavior: "smooth",
+          })
+      }
+      //scroll up
+      else {
+          container.scrollTo({
+              top: parseInt((container.scrollTop-1)/vh)*vh,
+              behavior: "smooth",
+          });
+      }
+    }, 250);
 });
 
 // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
