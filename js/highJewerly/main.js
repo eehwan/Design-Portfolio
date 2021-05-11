@@ -1,15 +1,43 @@
+// section 감지
 const sections = document.getElementsByTagName("section");
 Array.from(sections).forEach(section => {
-    console.log(section)
     section.addEventListener('mouseenter', e => {
         e.target.classList.add("on");
     });
     section.addEventListener('mouseleave', e => {
-        setTimeout(() => e.target.classList.remove("on"), 2000);
+        e.target.classList.remove("on");
     });
 });
 
-// const container = document.querySelector("#container");
+const container = document.querySelector("#container");
+// topbutton
+const topbutton = document.querySelector(".topbutton");
+topbutton.addEventListener('click', () => {
+    container.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    })
+});
+
+// scroll control
+container.addEventListener('mousewheel', (e) => {
+    e.preventDefault();
+    let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    //scroll down
+    if(e.wheelDelta < 0) {
+        container.scrollTo({
+            top: parseInt((container.scrollTop/vh)+1)*vh,
+            behavior: "smooth",
+        })
+    }
+    //scroll up
+    else {
+        container.scrollTo({
+            top: parseInt((container.scrollTop-1)/vh)*vh,
+            behavior: "smooth",
+        });
+    }
+});
 
 // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
 //     logo = document.querySelector(".logo"),

@@ -47,7 +47,7 @@
 #section05 .text_box .button .arrow{
     position: relative;
     top: calc(8px - 4px);
-    left: 27px;
+    left: 24px;
 }
 #section05 .text_box .button:hover .arrow{
     animation: arrowMove .7s ease-in-out infinite 0s;
