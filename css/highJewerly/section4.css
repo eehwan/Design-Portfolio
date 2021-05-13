@@ -49,39 +49,51 @@
     position: absolute;
     right: 180px;
     bottom: 0;
-    height: 85vh;
-    width: 600px;
+    height: 837px;
+    width: 550px;
     background-color: black;
     overflow: hidden;
 }
-#section04 #changing .showing .img_box >img{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
 
 /* img_box >img */
+#section04 #changing .showing .img_box >img{
+    position: relative;
+    min-height: 100%;
+}
+#section04 #changing .showing:nth-child(1) .img_box >img{
+    right: 900px;
+}
+#section04 #changing .showing:nth-child(2) .img_box >img{
+    right: 100px;
+}
+#section04 #changing .showing:nth-child(3) .img_box >img{
+    right: 330px;
+}
+#section04 #changing .showing:nth-child(4) .img_box >img{
+    max-height: 100%;
+}
+#section04 #changing .showing:nth-child(5) .img_box >img{
+    right: 100px;
+}
+
+
+#section04 #changing .showing .img_box >img{
+    transition: all .7s ease-out .3s;
+}
 #section04 #changing.on1 .showing:nth-child(1) .img_box >img{
-    transform: scale(1.5) translate(-50px, -138px);
-    transition: all 1s ease-in-out .5s;
+    transform: scale(1.1) translate(-55px, -25px);
 }
 #section04 #changing.on2 .showing:nth-child(2) .img_box >img{
-    transform: scale(1.6) translate(5px, 0px);
-    transition: all 1s ease-in-out .5s;
+    transform: scale(1.1) translate(0, 0);
 }
 #section04 #changing.on3 .showing:nth-child(3) .img_box >img{
-    transform: scale(1.5) translate(55px, -130px);
-    transition: all 1s ease-in-out .5s;
+    transform: scale(1.1) translate(0, -25px);
 }
 #section04 #changing.on4 .showing:nth-child(4) .img_box >img{
-    transform: scale(1.5) translate(-50px, -138px);
-    transition: all 1s ease-in-out .5s;
+    transform: scale(1.15) translate(-0, 50px);
 }
 #section04 #changing.on5 .showing:nth-child(5) .img_box >img{
-    transform: scale(1.5) translate(-50px, -138px);
-    transition: all 1s ease-in-out .5s;
+    transform: scale(1.1) translate(-0, -30px);
 }
 
 /* selector */

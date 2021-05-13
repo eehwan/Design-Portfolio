@@ -3,10 +3,10 @@
     left: 0;
     top: 0;
     min-width: 1920px;
+    width: 100%;
     height: 100vh;
     display: flex;
     background: rgba(255,255,255,255);
-    /*display: none;*/
     opacity: 0;
     z-index: -1;
     transition: all .5s;
@@ -17,12 +17,12 @@
     z-index: 999999;
 }
 
-.x_button{
-    width: 26px;
-    height: 26px;
+.x_button {
     position: absolute;
-    left: 90px;
-    top: 448px;
+    display: block;
+    top: 440px;
+    left: 80px;
+    padding: 15px;
 }
 /* left_area */
 #mega #left_area{

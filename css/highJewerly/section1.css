@@ -1,7 +1,90 @@
+@keyframes arrowVerticalMove {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
 #section01 .background{
     position: absolute;
     width: 100%;
     height: 500px;
     bottom: 0;
     background-image: url("../../sub_high_jewerly/sec01/sec01_bg1.jpg");
+    z-index: -1;
+}
+
+#section01 .slider{
+    position: relative;
+    width: 100vw;
+    min-width: 1920px;
+    height: 100vh;
+}
+#section01 .slider .slider__item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+}
+#section01 .slider .slider__item.on{
+    opacity: 1;
+    z-index: 1;
+}
+
+/* text_box */
+#section01 .slider .slider__item .text_box{
+    position: absolute;
+    left: 300px;
+    width: 50vw;
+    height: 80vh;
+}
+#section01 .slider .slider__item .text_box .title{
+    position: absolute;
+    top: 100px;
+}
+#section01 .slider .slider__item .text_box .title >img:last-child{
+    position: absolute;
+    right: 100px;
+    bottom: 10px; 
+}
+#section01 .slider .slider__item .text_box .context{
+    position: absolute;
+    top: 400px;
+}
+#section01 .slider .slider__item .text_box .context img{
+    margin-bottom: 50px;
+}
+#section01 .slider .slider__item .text_box .button{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-weight: bolder;
+}
+#section01 .slider .slider__item .text_box .button .arrow{
+    margin-top: 20px;
+}
+#section01 .slider .slider__item .text_box .button:hover .arrow{
+    animation: arrowVerticalMove .7s ease-in-out infinite 0s;
+}
+
+/* img_box */
+#section01 .slider .slider__item .img_box1{
+    position: absolute;
+    right: 500px;
+    bottom: 150px;
+    z-index: 1;
+}
+#section01 .slider .slider__item .img_box1 >img:last-child{
+    position: relative;
+    left: 40px;
+}
+#section01 .slider .slider__item .img_box2{
+    position: absolute;
+    right: 200px;
+    bottom: 0;
 }
