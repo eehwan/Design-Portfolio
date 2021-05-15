@@ -75,16 +75,17 @@
 /* img_box */
 #section01 .slider .slider__item .img_box1{
     position: absolute;
-    right: 500px;
-    bottom: 150px;
+    right: 580px;
+    bottom: 100px;
     z-index: 1;
 }
 #section01 .slider .slider__item .img_box1 >img:last-child{
     position: relative;
     left: 40px;
+    bottom: 40px;
 }
 #section01 .slider .slider__item .img_box2{
     position: absolute;
-    right: 200px;
+    right: 300px;
     bottom: 0;
 }
