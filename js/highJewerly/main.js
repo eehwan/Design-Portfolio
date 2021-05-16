@@ -65,33 +65,47 @@ x_button.addEventListener('click', () => {
 });
 
 // slider
-const makeSlider = (targetTag) => {
+const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=2000) => {
     const target = document.querySelector(targetTag);
     target.innerHTML = target.innerHTML.replace(/(\n((\t| ){0,})){1,}/g, '');
+    const childNodes = Array.from(target.childNodes)
 
-    console.log(target.childNodes)
-    console.log(Array.from(target.childNodes));
-    for (let i=0; i < target.childNodes.length; i++){
-        console.log(i, Array.from(target.childNodes)[i])
+    let i = 0
+    childNodes[i].classList.add("on");
+    const changSlide = () => {
+        if (i >= childNodes.length){i = 0}
+        if (i == -1){i = childNodes.length-1}
+        console.log(i)
+        childNodes.forEach(element => {
+            element.classList.remove('on');
+        });
+        childNodes[i].classList.add("on");
     }
-    // const currentSlide = Array.from(target.childNodes).filter(x => x==0).filter(x => x.classList.contains("on"));
-    // if (!(currentSlide)) {
-    //     currentSlide = target.firstChild;
-    //     currentSlide.classList.add("on")
-    // }
-    // const slideNext = (target, currentSlide, option=1) => {
-    //     currentSlide.classList.remove('on');
-    //     // next
-    //     if (option == 1){
-    //             nextSlide = currentSlide.nextElementSibling;
-    //     }
-    //     //  next
-    //     else if (option == -1){
-    //         nextSlide = currentSlide.previousElementSibling;
-    //     }
-    //     nextSlide.classList.add('on');
-    // }
-    
-    // setInterval(() => slideNext(target, currentSlide, 1), 2000);
+    let timer = setInterval(() => {
+        i += 1
+        changSlide(i);
+    }, delay);
+
+    const nextBtn = document.querySelector(nextBtnTag),
+        previousBtn = document.querySelector(previousBtnTag);
+
+    nextBtn.addEventListener('click', () => {
+        clearInterval(timer);
+        i += 1;
+        changSlide();
+        timer = setInterval(() => {
+            i += 1
+            changSlide(i);
+        }, delay);
+    });
+    previousBtn.addEventListener('click', () => {
+        clearInterval(timer);
+        i -= 1;
+        changSlide();
+        timer = setInterval(() => {
+            i += 1
+            changSlide(i);
+        }, delay);
+    });
 }
-makeSlider("#section01 .slider")
+makeSlider("#section01 .slider", "#section01 .nextBtn", "#section01 .prevBtn")

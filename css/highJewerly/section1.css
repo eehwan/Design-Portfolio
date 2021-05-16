@@ -16,6 +16,25 @@
     z-index: -1;
 }
 
+/* button */
+#section01 .slider-control{
+    position: absolute;
+    right: 270px;
+    bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+#section01 .slider-control >div{
+    margin-top: 25px;
+    cursor: pointer;
+    filter: invert(0.7);
+}
+#section01 .slider-control >div:hover{
+    filter: invert(0);
+}
+
+/* slider */
 #section01 .slider{
     position: relative;
     width: 100vw;
@@ -28,6 +47,7 @@
     height: 100%;
     opacity: 0;
     z-index: -1;
+    transition: all 1s ease-in-out;
 }
 #section01 .slider .slider__item.on{
     opacity: 1;
