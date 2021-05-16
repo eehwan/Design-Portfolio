@@ -63,3 +63,35 @@ menu.addEventListener('click', () => {
 x_button.addEventListener('click', () => {
     mega.classList.remove('on');
 });
+
+// slider
+const makeSlider = (targetTag) => {
+    const target = document.querySelector(targetTag);
+    target.innerHTML = target.innerHTML.replace(/(\n((\t| ){0,})){1,}/g, '');
+
+    console.log(target.childNodes)
+    console.log(Array.from(target.childNodes));
+    for (let i=0; i < target.childNodes.length; i++){
+        console.log(i, Array.from(target.childNodes)[i])
+    }
+    // const currentSlide = Array.from(target.childNodes).filter(x => x==0).filter(x => x.classList.contains("on"));
+    // if (!(currentSlide)) {
+    //     currentSlide = target.firstChild;
+    //     currentSlide.classList.add("on")
+    // }
+    // const slideNext = (target, currentSlide, option=1) => {
+    //     currentSlide.classList.remove('on');
+    //     // next
+    //     if (option == 1){
+    //             nextSlide = currentSlide.nextElementSibling;
+    //     }
+    //     //  next
+    //     else if (option == -1){
+    //         nextSlide = currentSlide.previousElementSibling;
+    //     }
+    //     nextSlide.classList.add('on');
+    // }
+    
+    // setInterval(() => slideNext(target, currentSlide, 1), 2000);
+}
+makeSlider("#section01 .slider")
