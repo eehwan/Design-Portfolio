@@ -33,6 +33,25 @@
 #section01 .slider-control >div:hover{
     filter: invert(0);
 }
+#section01 .button{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 200px;
+    left: 280px;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    z-index: 5;
+}
+#section01 .button .arrow{
+    margin-top: 20px;
+}
+#section01 .button:hover .arrow{
+    animation: arrowVerticalMove .7s ease-in-out infinite 0s;
+}
+
+
 
 /* slider */
 #section01 .slider{
@@ -77,26 +96,12 @@
 #section01 .slider .slider__item .text_box .context img{
     margin-bottom: 50px;
 }
-#section01 .slider .slider__item .text_box .button{
-    position: absolute;
-    bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    font-weight: bolder;
-}
-#section01 .slider .slider__item .text_box .button .arrow{
-    margin-top: 20px;
-}
-#section01 .slider .slider__item .text_box .button:hover .arrow{
-    animation: arrowVerticalMove .7s ease-in-out infinite 0s;
-}
 
 /* img_box */
 #section01 .slider .slider__item .img_box1{
     position: absolute;
-    right: 580px;
-    bottom: 100px;
+    right: 585px;
+    top: 335px;
     z-index: 1;
 }
 #section01 .slider .slider__item .img_box1 >img:last-child{

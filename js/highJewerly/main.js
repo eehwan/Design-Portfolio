@@ -65,7 +65,7 @@ x_button.addEventListener('click', () => {
 });
 
 // slider
-const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=2000) => {
+const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
     const target = document.querySelector(targetTag);
     target.innerHTML = target.innerHTML.replace(/(\n((\t| ){0,})){1,}/g, '');
     const childNodes = Array.from(target.childNodes)
@@ -75,7 +75,6 @@ const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=2000) => {
     const changSlide = () => {
         if (i >= childNodes.length){i = 0}
         if (i == -1){i = childNodes.length-1}
-        console.log(i)
         childNodes.forEach(element => {
             element.classList.remove('on');
         });
