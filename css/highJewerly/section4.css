@@ -42,7 +42,7 @@
     left: 225px;
     top: 150px;
 }
-#section04 #changing .showing .title >*{
+#section04 #changing .showing .title >div{
     margin-bottom: 30px;
 }
 #section04 #changing .showing .img_box{
