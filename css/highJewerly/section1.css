@@ -37,7 +37,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    bottom: 200px;
+    bottom: 150px;
     left: 280px;
     padding: 20px;
     cursor: pointer;

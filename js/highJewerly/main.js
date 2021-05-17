@@ -42,6 +42,7 @@ container.addEventListener('wheel', (e) => {
     // scroll start시 실행
     if(!wheeling){
         // console.log("start wheeling !");
+        controlScroll(e, container, Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0));
     }
     clearTimeout(wheeling);
 
@@ -49,8 +50,7 @@ container.addEventListener('wheel', (e) => {
     wheeling = setTimeout(() => {
         // console.log("stop wheeling !");
         wheeling = undefined;
-        controlScroll(e, container, Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0));  
-    }, 350);
+    }, 500);
 });
 
 // 메뉴창
@@ -63,6 +63,13 @@ menu.addEventListener('click', () => {
 x_button.addEventListener('click', () => {
     mega.classList.remove('on');
 });
+const sc1Btn = document.querySelector("#section01 .button");
+sc1Btn.addEventListener('click', ()=> {
+    container.scrollTo({
+        top: parseInt(Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 3),
+        behavior: "smooth",
+    });
+})
 
 // slider
 const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
