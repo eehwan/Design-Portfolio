@@ -53,3 +53,36 @@
 #section05 .text_box .button:hover .arrow{
     animation: arrowMove .7s ease-in-out infinite 0s;
 }
+
+/* scroll transition */
+#section05{
+    opacity: 0;
+}
+#section05.on{
+    opacity: 1;
+}
+#section05 .title{
+    transition: all 0.7s ease-in-out;
+    opacity: 0;
+    transform: translateX(-200px);
+}
+#section05.on .title{
+    opacity: 1;
+    transform: translateX(0);
+}
+#section05 .text_box{
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(300px);
+}
+#section05.on .text_box{
+    opacity: 1;
+    transform: translateY(0);
+}
+#section05 .img_box{
+    transition: all 2s ease .2s;
+    opacity: 0;
+}
+#section05.on .img_box{
+    opacity: 1;
+}

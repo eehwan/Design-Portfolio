@@ -14,19 +14,25 @@
     bottom: 0;
     background-image: url("../../sub_high_jewerly/sec01/sec01_bg1.jpg");
     z-index: -1;
+
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+#section01.on .background{
+    opacity: 1;
 }
 
 /* button */
 #section01 .slider-control{
     position: absolute;
-    right: 270px;
+    right: 260px;
     bottom: 150px;
     display: flex;
     flex-direction: column;
     z-index: 5;
 }
 #section01 .slider-control >div{
-    margin-top: 25px;
+    padding: 15px;
     cursor: pointer;
     filter: invert(0.7);
 }
@@ -41,8 +47,11 @@
     left: 280px;
     padding: 20px;
     cursor: pointer;
-    font-weight: bolder;
     z-index: 5;
+}
+#section01 .button:hover{
+    font-weight: bolder;
+    text-decoration: underline;
 }
 #section01 .button .arrow{
     margin-top: 20px;
@@ -64,9 +73,10 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    
     opacity: 0;
     z-index: -1;
-    transition: all 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 #section01 .slider .slider__item.on{
     opacity: 1;
@@ -104,7 +114,7 @@
     top: 335px;
     z-index: 1;
 }
-#section01 .slider .slider__item .img_box1 >img:last-child{
+#section01 .slider .slider__item .img_box1 >img{
     position: relative;
     left: 40px;
     bottom: 40px;
@@ -114,3 +124,64 @@
     right: 300px;
     bottom: 0;
 }
+
+
+/* scroll transition */
+#section01{
+    opacity: 0;
+}
+#section01.on{
+    opacity: 1;
+}
+#section01 .button{
+    opacity: 0;
+}
+#section01.on .button{
+    opacity: 1;
+    transition: opacity 1s ease-in-out .3s;
+}
+#section01 .slider .slider__item .text_box .title{
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all .8s ease-in-out;
+}
+#section01.on .slider .slider__item .text_box .title{
+    transform: translateX(0);
+    opacity: 1;
+}
+#section01 .slider .slider__item .text_box .context{
+    transform: translateX(-350px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+#section01.on .slider .slider__item .text_box .context{
+    transform: translateX(0);
+    opacity: 1;
+}
+#section01 .slider .slider__item .img_box1{
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all .8s ease-in-out;
+}
+#section01.on .slider .slider__item .img_box1{
+    transform: translateX(0);
+    opacity: 1;
+}
+#section01 .slider .slider__item .img_box2{
+    transform: translatex(400px);
+    opacity: 0;
+    transition: all 1.15s ease-in-out .15s;
+}
+#section01.on .slider .slider__item .img_box2{
+    transform: translatex(0);
+    opacity: 1;
+}
+/* #section01 .slider-control{
+    transform: translatex(400px);
+    opacity: 0;
+    transition: all 1.15s ease-in-out .15s;
+}
+#section01.on .slider-control{
+    transform: translatex(0);
+    opacity: 1;
+} */
