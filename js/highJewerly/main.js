@@ -4,12 +4,22 @@ let containerHeight = Math.max(document.documentElement.clientHeight || 0, windo
 // topbutton
 const topbutton = document.querySelector(".topbutton");
 
+// section 감지
+const sections = document.getElementsByTagName("section"),
+sectionsArray = Array.from(sections);
+
+const detectSection = (destination) => {
+    sectionsArray.forEach(section => section.classList.remove("on"));
+    if (destination < sectionsArray.length){
+        setTimeout(()=> sectionsArray[destination].classList.add("on"), 300);
+    }
+}
+
 // scroll control
 const controlScroll = (e, targetElement, targetHeight) => {
-    targetElement.scrollTo({
-        top: (Math.ceil(targetElement.scrollTop/targetHeight)+Math.sign(e.deltaY))*targetHeight,
-        behavior: "smooth",
-    });
+    const destination = (Math.ceil(targetElement.scrollTop/targetHeight)+Math.sign(e.deltaY))
+    targetElement.scrollTo({ top: destination*targetHeight, behavior: "smooth", });
+    detectSection(destination);
 };
 
 // slider
@@ -56,19 +66,6 @@ const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
     });
 }
 
-// section 감지
-const sections = document.getElementsByTagName("section"),
-sectionsArray = Array.from(sections);
-
-const detectSection = (target) => {
-    const current = Math.ceil(target.scrollTop/containerHeight);
-    console.log(current);
-    sectionsArray.forEach(section => section.classList.remove("on"));
-    if (current < sectionsArray.length){
-        sectionsArray[current].classList.add("on");
-    }
-}
-
 const init = () => {
     window.addEventListener('resize', (e) => {
         containerHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
@@ -76,10 +73,8 @@ const init = () => {
     makeSlider("#section01 .slider", "#section01 .nextBtn", "#section01 .prevBtn")
     // 맨위로
     topbutton.addEventListener('click', () => {
-        container.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        })
+        container.scrollTo({ top: 0, behavior: "smooth", });
+        detectSection(0);
     });
     // 메뉴창
     const menu = document.querySelector(".menu");
@@ -94,10 +89,8 @@ const init = () => {
     const sc1Btn = document.querySelector("#section01 .button");
     // 컬렉션 자세히보기
     sc1Btn.addEventListener('click', ()=> {
-        container.scrollTo({
-            top: containerHeight * 3,
-            behavior: "smooth",
-        });
+        container.scrollTo({ top: containerHeight * 3, behavior: "smooth", });
+        detectSection(2);
     })
     // scrolling
     let wheeling = undefined;
@@ -116,14 +109,8 @@ const init = () => {
             wheeling = undefined;
         }, 350);
     });
-    // sections
-    detectSection(container);
-    container.addEventListener('scroll', (e) => {
-        detectSection(container);
-    })
-    window.addEventListener('resize', (e) => {
-        detectSection(container);
-    })
+
+    detectSection(0);
 }
 
 window.addEventListener('load', e => init());

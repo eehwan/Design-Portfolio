@@ -62,7 +62,7 @@
     opacity: 1;
 }
 #section05 .title{
-    transition: all 0.7s ease-in-out;
+    transition: all 0.8s ease-in-out;
     opacity: 0;
     transform: translateX(-200px);
 }
@@ -71,16 +71,16 @@
     transform: translateX(0);
 }
 #section05 .text_box{
-    transition: all 1s ease-in-out;
+    transition: all 1.5s ease-in-out;
     opacity: 0;
-    transform: translateY(300px);
+    transform: translateY(150px);
 }
 #section05.on .text_box{
     opacity: 1;
     transform: translateY(0);
 }
 #section05 .img_box{
-    transition: all 2s ease .2s;
+    transition: all 2s ease .25s;
     opacity: 0;
 }
 #section05.on .img_box{
