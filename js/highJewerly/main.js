@@ -9,9 +9,13 @@ const sections = document.getElementsByTagName("section"),
 sectionsArray = Array.from(sections);
 
 const detectSection = (destination) => {
-    sectionsArray.forEach(section => section.classList.remove("on"));
-    if (destination < sectionsArray.length){
-        setTimeout(()=> sectionsArray[destination].classList.add("on"), 300);
+    for (let n = 0; n < sectionsArray.length; n++){
+        if (n == destination){
+            setTimeout(()=> sectionsArray[n].classList.add("on"), 300);
+        }
+        else if (destination >= 0 && destination < sectionsArray.length){
+            setTimeout(()=> sectionsArray[n].classList.remove("on"), 300);
+        }
     }
 }
 
@@ -90,7 +94,7 @@ const init = () => {
     // 컬렉션 자세히보기
     sc1Btn.addEventListener('click', ()=> {
         container.scrollTo({ top: containerHeight * 3, behavior: "smooth", });
-        detectSection(2);
+        detectSection(3);
     })
     // scrolling
     let wheeling = undefined;

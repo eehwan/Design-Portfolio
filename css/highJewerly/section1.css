@@ -3,7 +3,7 @@
         transform: translateY(0px);
     }
     to {
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
 }
 
@@ -57,7 +57,7 @@
     margin-top: 20px;
 }
 #section01 .button:hover .arrow{
-    animation: arrowVerticalMove .7s ease-in-out infinite 0s;
+    animation: arrowVerticalMove 1s ease-in-out infinite 0s;
 }
 
 
