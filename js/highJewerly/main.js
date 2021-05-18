@@ -1,12 +1,8 @@
 const container = document.querySelector("#container");
+let containerHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
 // topbutton
 const topbutton = document.querySelector(".topbutton");
-topbutton.addEventListener('click', () => {
-    container.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    })
-});
 
 // scroll control
 const controlScroll = (e, targetElement, targetHeight) => {
@@ -15,47 +11,13 @@ const controlScroll = (e, targetElement, targetHeight) => {
         behavior: "smooth",
     });
 };
-let wheeling = undefined;
-container.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    // scroll start시 실행
-    if(!wheeling){
-        // console.log("start wheeling !");
-        controlScroll(e, container, Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0));
-    }
-    clearTimeout(wheeling);
-
-    // scroll stop시 실행
-    wheeling = setTimeout(() => {
-        // console.log("stop wheeling !");
-        wheeling = undefined;
-    }, 350);
-});
-
-// 메뉴창
-const menu = document.querySelector(".menu");
-const mega = document.querySelector("#mega");
-const x_button = document.querySelector(".x_button");
-menu.addEventListener('click', () => {
-    mega.classList.add('on');
-});
-x_button.addEventListener('click', () => {
-    mega.classList.remove('on');
-});
-const sc1Btn = document.querySelector("#section01 .button");
-sc1Btn.addEventListener('click', ()=> {
-    container.scrollTo({
-        top: parseInt(Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 3),
-        behavior: "smooth",
-    });
-})
 
 // slider
 const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
     const target = document.querySelector(targetTag);
     target.innerHTML = target.innerHTML.replace(/(\n((\t| ){0,})){1,}/g, '');
     const childNodes = Array.from(target.childNodes)
-
+    
     let i = 0
     childNodes[i].classList.add("on");
     const changSlide = () => {
@@ -93,26 +55,78 @@ const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
         }, delay);
     });
 }
-makeSlider("#section01 .slider", "#section01 .nextBtn", "#section01 .prevBtn")
 
 // section 감지
 const sections = document.getElementsByTagName("section"),
-    sectionsArray = Array.from(sections);
-setTimeout(()=>sectionsArray[0].classList.add('on'), 20);
-sectionsArray.forEach(section => {
-    section.addEventListener('mouseenter', e => {
-        e.target.classList.add("on");
-    });
-    section.addEventListener('mouseleave', e => {
-        e.target.classList.remove("on");
-    });
-});
+sectionsArray = Array.from(sections);
 
-// cursor
-// const cursor = document.querySelector("#cursor"),
-//     mov1 = document.querySelector("#section01 .slider__item:nth-child(1) .img_box1 .movArea"),
-//     mov2 = document.querySelector("#section01 .slider__item:nth-child(2) .img_box1 .movArea"),
-//     mov3 = document.querySelector("#section01 .slider__item:nth-child(3) .img_box1 .movArea");
+const detectSection = (target) => {
+    const current = Math.ceil(target.scrollTop/containerHeight);
+    console.log(current);
+    sectionsArray.forEach(section => section.classList.remove("on"));
+    if (current < sectionsArray.length){
+        sectionsArray[current].classList.add("on");
+    }
+}
+
+const init = () => {
+    window.addEventListener('resize', (e) => {
+        containerHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    })    
+    makeSlider("#section01 .slider", "#section01 .nextBtn", "#section01 .prevBtn")
+    // 맨위로
+    topbutton.addEventListener('click', () => {
+        container.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        })
+    });
+    // 메뉴창
+    const menu = document.querySelector(".menu");
+    const mega = document.querySelector("#mega");
+    const x_button = document.querySelector(".x_button");
+    menu.addEventListener('click', () => {
+        mega.classList.add('on');
+    });
+    x_button.addEventListener('click', () => {
+        mega.classList.remove('on');
+    });
+    const sc1Btn = document.querySelector("#section01 .button");
+    // 컬렉션 자세히보기
+    sc1Btn.addEventListener('click', ()=> {
+        container.scrollTo({
+            top: containerHeight * 3,
+            behavior: "smooth",
+        });
+    })
+    // scrolling
+    let wheeling = undefined;
+    container.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        // scroll start시 실행
+        if(!wheeling){
+            // console.log("start wheeling !");
+            controlScroll(e, container, containerHeight);
+        }
+        clearTimeout(wheeling);
+    
+        // scroll stop시 실행
+        wheeling = setTimeout(() => {
+            // console.log("stop wheeling !");
+            wheeling = undefined;
+        }, 350);
+    });
+    // sections
+    detectSection(container);
+    container.addEventListener('scroll', (e) => {
+        detectSection(container);
+    })
+    window.addEventListener('resize', (e) => {
+        detectSection(container);
+    })
+}
+
+window.addEventListener('load', e => init());
 
 // const cursorWidth = 77,
 //     cursorHeight = 77;
