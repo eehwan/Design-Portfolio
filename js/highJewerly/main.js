@@ -1,14 +1,3 @@
-// section 감지
-const sections = document.getElementsByTagName("section");
-Array.from(sections).forEach(section => {
-    section.addEventListener('mouseenter', e => {
-        e.target.classList.add("on");
-    });
-    section.addEventListener('mouseleave', e => {
-        e.target.classList.remove("on");
-    });
-});
-
 const container = document.querySelector("#container");
 // topbutton
 const topbutton = document.querySelector(".topbutton");
@@ -21,20 +10,10 @@ topbutton.addEventListener('click', () => {
 
 // scroll control
 const controlScroll = (e, targetElement, targetHeight) => {
-    //scroll down
-    if(e.wheelDelta < 0) {
-        targetElement.scrollTo({
-            top: parseInt((targetElement.scrollTop/targetHeight)+1)*targetHeight,
-            behavior: "smooth",
-        })
-    }
-    //scroll up
-    else {
-        targetElement.scrollTo({
-            top: parseInt((targetElement.scrollTop-1)/targetHeight)*targetHeight,
-            behavior: "smooth",
-        });
-    }
+    targetElement.scrollTo({
+        top: (Math.ceil(targetElement.scrollTop/targetHeight)+Math.sign(e.deltaY))*targetHeight,
+        behavior: "smooth",
+    });
 };
 let wheeling = undefined;
 container.addEventListener('wheel', (e) => {
@@ -50,7 +29,7 @@ container.addEventListener('wheel', (e) => {
     wheeling = setTimeout(() => {
         // console.log("stop wheeling !");
         wheeling = undefined;
-    }, 500);
+    }, 350);
 });
 
 // 메뉴창
@@ -91,10 +70,10 @@ const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
         i += 1
         changSlide(i);
     }, delay);
-
+    
     const nextBtn = document.querySelector(nextBtnTag),
-        previousBtn = document.querySelector(previousBtnTag);
-
+    previousBtn = document.querySelector(previousBtnTag);
+    
     nextBtn.addEventListener('click', () => {
         clearInterval(timer);
         i += 1;
@@ -115,3 +94,55 @@ const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
     });
 }
 makeSlider("#section01 .slider", "#section01 .nextBtn", "#section01 .prevBtn")
+
+// section 감지
+const sections = document.getElementsByTagName("section"),
+    sectionsArray = Array.from(sections);
+setTimeout(()=>sectionsArray[0].classList.add('on'), 20);
+sectionsArray.forEach(section => {
+    section.addEventListener('mouseenter', e => {
+        e.target.classList.add("on");
+    });
+    section.addEventListener('mouseleave', e => {
+        e.target.classList.remove("on");
+    });
+});
+
+// cursor
+// const cursor = document.querySelector("#cursor"),
+//     mov1 = document.querySelector("#section01 .slider__item:nth-child(1) .img_box1 .movArea"),
+//     mov2 = document.querySelector("#section01 .slider__item:nth-child(2) .img_box1 .movArea"),
+//     mov3 = document.querySelector("#section01 .slider__item:nth-child(3) .img_box1 .movArea");
+
+// const cursorWidth = 77,
+//     cursorHeight = 77;
+// const controlCursor = (e) => {
+//     console.log(e);
+//     cursor.style.left = `${e.pageX-cursorWidth}px`;
+//     cursor.style.top = `${e.pageY -cursorHeight}px`;
+// }
+
+// console.log(mov1, mov2, mov3);
+// mov1.addEventListener('mousemove', (e) => {
+//     cursor.classList.add('mov1');
+//     controlCursor(e);
+// });
+// mov1.addEventListener('mouseout', () => {
+//     cursor.classList.remove('mov1');
+// });
+// mov2.addEventListener('mousemove', (e) => {
+//     cursor.classList.add('mov2');
+//     controlCursor(e);
+// });
+// mov2.addEventListener('mouseout', () => {
+//     cursor.classList.remove('mov2');
+//     console.log("22");
+// });
+// mov3.addEventListener('mousemove', (e) => {
+//     cursor.classList.add('mov3');
+//     controlCursor(e);
+// });
+// mov3.addEventListener('mouseout', () => {
+//     cursor.classList.remove('mov3');
+//     console.log("33");
+// });

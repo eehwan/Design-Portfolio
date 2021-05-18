@@ -2,7 +2,32 @@ body {
     position: relative;
 }
 
-
+/* #cursor{
+    position: absolute;
+    width: 154px;
+    height: 154px;
+    cursor: none;
+    z-index: 999;
+}
+#cursor > div{
+    display: none;
+    position: absolute;
+}
+#cursor.mov1 >div:nth-child(1){
+    display: block;
+    opacity: 1;
+    background-image: url("../../sub_high_jewerly/sec01/wings-of-rome_playbutton.png");
+}
+#cursor.mov2 >div:nth-child(2){
+    display: block;
+    opacity: 1;
+    background-image: url("../../sub_high_jewerly/sec01/mosaico_play_button.png");
+}
+#cursor.mov3 >div:nth-child(3){
+    display: block;
+    opacity: 1;
+    background-image: url("../../sub_high_jewerly/sec01/sapire_play_button.png");
+} */
 #container{
     position: absolute;
     /* display: flex;
