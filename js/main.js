@@ -14,25 +14,24 @@ window.addEventListener('DOMContentLoaded', () => {
     container.track.xAxis.element.remove();
     // Scrollbar.detachStyle();
 
-
     ScrollTrigger.scrollerProxy("body", {
-
         scrollTop(value) {
-
             if (arguments.length) {
                 container.scrollTop = value;
             }
-
             return container.scrollTop;
-
         }
     });
 
 
     /* 스 크 롤 이 벤 트 영 역*/
     // const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
-        logo = document.querySelector(".logo"),
+    let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    window.addEventListener('resize', () => {
+        // vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    })
+    const logo = document.querySelector(".logo"),
         topmenu = document.querySelector(".topmenu"),
         menu = document.querySelector(".menu"),
         lng  = document.querySelector(".lng");
@@ -107,7 +106,7 @@ window.addEventListener('DOMContentLoaded', () => {
         $mouseY = 0,
         dx = 0,
         dy = 0;
-    const handleFlag = () => {
+    const moveFlag = () => {
         // console.log("iters");
 
         dx += (($mouseX - dx) / 12);
@@ -126,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
         $mouseY = e.pageY;
 
         for (let i=0; i <30; i++) {
-            setTimeout(handleFlag, 1);
+            setTimeout(moveFlag, 100);
         }
     });
     play_hover.addEventListener('mouseleave', (e) => {
