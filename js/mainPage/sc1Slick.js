@@ -51,16 +51,16 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     $("#flag").slick({
         dots: false, //navigation
-        arrows: true, //arrow
-        prevArrow: $('#section01 .prev_hover'), //prev
-        nextArrow: $('#section01 .next_hover'), //next
-        autoplay: false, // autoplay mode
-        autoplaySpeed: 5000, // auto speed
+        arrows: false, //arrow
+        // prevArrow: $('#section01 .prev_hover'), //prev
+        // nextArrow: $('#section01 .next_hover'), //next
+        // autoplay: true, // autoplay mode
+        // autoplaySpeed: 5000, // auto speed
         pauseOnHover: false, // pause on mouse hover
         fade: true, //fade mode only one slider
         speed: 1000, // speed
         infinite: true, // infinite mode
-        asNavFor: '#section01 .img_slider', // another slider
+        // asNavFor: '#section01 .img_slider', // another slider
         centerMode: false, // center move
         centerPadding: '0%', // center move padding
         slidesToShow: 1, // show slider number
@@ -76,16 +76,16 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     $("#right_slider").slick({
         dots: false, //navigation
-        arrows: true, //arrow
-        prevArrow: $('#section01 .prev_hover'), //prev
-        nextArrow: $('#section01 .next_hover'), //next
-        autoplay: false, // autoplay mode
-        autoplaySpeed: 5000, // auto speed
-        pauseOnHover: false, // pause on mouse hover
+        arrows: false, //arrow
+        // prevArrow: $('#section01 .prev_hover'), //prev
+        // nextArrow: $('#section01 .next_hover'), //next
+        // autoplay: true, // autoplay mode
+        // autoplaySpeed: 5000, // auto speed
+        // pauseOnHover: true, // pause on mouse hover
         fade: true, //fade mode only one slider
         speed: 1000, // speed
         infinite: true, // infinite mode
-        asNavFor: '#section01 .img_slider', // another slider
+        // asNavFor: '#section01 .img_slider', // another slider
         centerMode: false, // center move
         centerPadding: '0%', // center move padding
         slidesToShow: 1, // show slider number

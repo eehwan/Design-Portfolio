@@ -92,7 +92,6 @@ window.addEventListener('DOMContentLoaded', () => {
     // 맨 위로 버튼
     $('.topbutton').click(function () {
         container.scrollTo(0, 0, 600, {
-            callback: () => console.log('done!'),
             easing: easing.easeInOutCirc,
         });
     });
