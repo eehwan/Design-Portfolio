@@ -38,6 +38,7 @@ const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
         if (i >= childNodes.length){i = 0}
         if (i == -1){i = childNodes.length-1}
         childNodes.forEach(element => {
+            console.log(element, childNodes)
             element.classList.remove('on');
         });
         childNodes[i].classList.add("on");
@@ -69,12 +70,49 @@ const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
         }, delay);
     });
 }
+// // Section1 flag
+// const flag1 =  document.querySelector("#flag1"),
+//     play_hover = document.querySelector(".play_hover");
+// const flagWidth = 77,
+//     flagHeight = 77;
+// const handleFlag = (target, movArea) => {
+//     let $mouseX = 0,
+//         $mouseY = 0,
+//         dx = 0,
+//         dy = 0;
+//     const moveFlag = (target) => {
+//         // console.log("iters");
+//         dx += (($mouseX - dx) / 12);
+//         dy += (($mouseY - dy) / 12);
+        
+//         target.style.left = `${dx-flagWidth}px`;
+//         target.style.top = `${dy -flagHeight}px`;
+//     }
+//     movArea.addEventListener('mouseenter', (e) => {
+//         target.style.opacity = "1";
+//         target.style.left = `${e.pageX-flagWidth}px`;
+//         target.style.top = `${e.pageY -flagHeight}px`;
+//     });
+//     movArea.addEventListener('mousemove', (e) => {
+//         $mouseX = e.pageX;
+//         $mouseY = e.pageY;
+//         for (let i=0; i <30; i++) {
+//             setTimeout(() => moveFlag(target), 10);
+//         }
+//     });
+//     movArea.addEventListener('mouseleave', (e) => {
+//         flag.style.opacity = "0";
+//     });
+// }
+
 
 const init = () => {
     window.addEventListener('resize', (e) => {
         containerHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
     })    
-    makeSlider("#section01 .slider", "#section01 .nextBtn", "#section01 .prevBtn")
+    // makeSlider("#section01 .text_box_slider", "#section01 .nextBtn", "#section01 .prevBtn");
+    // makeSlider("#section01 .img_box1_slider", "#section01 .nextBtn", "#section01 .prevBtn");
+    // makeSlider("#section01 .img_box2_slider", "#section01 .nextBtn", "#section01 .prevBtn");
     // 맨위로
     topbutton.addEventListener('click', () => {
         container.scrollTo({ top: 0, behavior: "smooth", });
@@ -117,7 +155,7 @@ const init = () => {
     detectSection(0);
 }
 
-window.addEventListener('load', e => init());
+window.addEventListener('load', () => init());
 
 // const cursorWidth = 77,
 //     cursorHeight = 77;

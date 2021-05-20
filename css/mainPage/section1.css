@@ -107,7 +107,7 @@ svg clippath text {
     top: 613px;
     z-index: 11;
     opacity: 0;
-    transition: all .5s
+    transition: all .5s;
 }
 
 .button_hover:hover{
@@ -183,6 +183,7 @@ svg clippath text {
     position: relative;
     /*overflow: hidden;*/
     transition: all 1s;
+    cursor: pointer;
 }
 
 .left_slider .slider02 .img_slider:hover{

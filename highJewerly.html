@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/controlBtns.css">
+    <link rel="stylesheet" href="css/plugin/slick.css">
+
     <link rel="stylesheet" href="css/highJewerly/style.css">
     <link rel="stylesheet" href="css/highJewerly/section1.css">
     <link rel="stylesheet" href="css/highJewerly/section2.css">
@@ -19,7 +21,7 @@
 <body>
 
     <div class="mainBtns">
-        <div class="logo"><img src="image/partials/bvlgari_logo.png" alt="logo"></div>
+        <div class="logo"><a href="index.html"><img src="image/partials/bvlgari_logo.png" alt="logo"></a></div>
         <div class="topmenu sub01"><img src="image/partials/topmenu_entire.png" alt="topmenu"></div>
         <div class="menu"><img src="image/partials/hamburger_menu.png" alt="menu"></div>
         <div class="lng"><img src="image/partials/language.png" alt="lng"></div>
@@ -86,8 +88,9 @@
     <section id="section01" class="">
         <div class="background"></div>
         <img src="image/sub_high_jewerly/location_bar/location_1.png" alt="" class="location_bar">
-        <div class="slider">
-            <div class="slider__item">
+
+        <div class="left_box">
+            <div class="text_box_slider">
                 <div class="text_box">
                     <div class="title">
                         <img src="image/sub_high_jewerly/sec01/title_txt_01.jpg" alt="">
@@ -98,17 +101,6 @@
                         <img src="image/sub_high_jewerly/sec01/sub_title_body.png" alt="">
                     </div>
                 </div>
-                <div class="img_box1">
-                    <div class="movArea">
-                        <img src="image/sub_high_jewerly/sec01/wings-of-rome_mov_area.png" alt="">
-                    </div>
-                    <img src="image/sub_high_jewerly/sec01/wings-of-rome_txt.png" alt="">
-                </div>
-                <div class="img_box2">
-                    <img src="image/sub_high_jewerly/sec01/wings-of-rome_img.jpg" alt="">
-                </div>                
-            </div>
-            <div class="slider__item">
                 <div class="text_box">
                     <div class="title">
                         <img src="image/sub_high_jewerly/sec01/title_txt_02.jpg" alt="">
@@ -119,17 +111,6 @@
                         <img src="image/sub_high_jewerly/sec01/sub_title_body.png" alt="">
                     </div>
                 </div>
-                <div class="img_box1">
-                    <div class="movArea">
-                        <img src="image/sub_high_jewerly/sec01/mosaico_mov_area.png" alt="">
-                    </div>
-                    <img src="image/sub_high_jewerly/sec01/Mosaico_txt.png" alt="">
-                </div>
-                <div class="img_box2">
-                    <img src="image/sub_high_jewerly/sec01/mosaico_img.jpg" alt="">
-                </div>                
-            </div>
-            <div class="slider__item">
                 <div class="text_box">
                     <div class="title">
                         <img src="image/sub_high_jewerly/sec01/title_txt_03.jpg" alt="">
@@ -140,17 +121,52 @@
                         <img src="image/sub_high_jewerly/sec01/sub_title_body.png" alt="">
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="center_box">
+            <div class="img_box1_slider">
                 <div class="img_box1">
-                    <div class="movArea">
-                        <img src="image/sub_high_jewerly/sec01/sapire_mov_area.png" alt="">
+                    <div class="play_hover">
+                        <div>
+                            <img src="image/sub_high_jewerly/sec01/wings-of-rome_mov_area.png" class="movArea" alt="">
+                        </div>
+                    </div>
+                    <img src="image/sub_high_jewerly/sec01/wings-of-rome_txt.png" alt="">
+                </div>
+                <div class="img_box1">
+                    <div class="play_hover">
+                        <div>
+                            <img src="image/sub_high_jewerly/sec01/mosaico_mov_area.png" class="movArea" alt="">
+                        </div>
+                    </div>
+                    <img src="image/sub_high_jewerly/sec01/Mosaico_txt.png" alt="">
+                </div>
+                <div class="img_box1">
+                    <div class="play_hover">
+                        <div>
+                            <img src="image/sub_high_jewerly/sec01/sapire_mov_area.png" class="movArea" alt="">
+                        </div>
                     </div>
                     <img src="image/sub_high_jewerly/sec01/Sapire lace_txt.png" alt="">
                 </div>
-                <div class="img_box2">
-                    <img src="image/sub_high_jewerly/sec01/sapire_img.jpg" alt="">
-                </div>                
             </div>
         </div>
+        <div class="right_box">
+            <div class="img_box2_slider">
+                <div class="img_box2"><img src="image/sub_high_jewerly/sec01/wings-of-rome_img.jpg" alt=""></div>                
+                <div class="img_box2"><img src="image/sub_high_jewerly/sec01/mosaico_img.jpg" alt=""></div>
+                <div class="img_box2"><img src="image/sub_high_jewerly/sec01/sapire_img.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <!-- <div class="slider">
+            <div class="slider__item">
+            </div>
+            <div class="slider__item">
+            </div>
+            <div class="slider__item">
+            </div>
+        </div> -->
         <div class="button">
             <div>컬렉션 전체보기</div>
             <div class="arrow">
@@ -351,11 +367,25 @@
         <div class="upper_footer"><img src="image/partials/upper_footer.jpg" alt=""></div>
         <div class="lower_footer"><img src="image/partials/footer_img.jpg" alt=""></div>
     </div>
+    
+</div>
+<div class="pop">
+    <div class="videoContainer">
+        <video loop controls src="video/highJewerly/wings_of_rome.mp4"></video>
+    </div>
+    <div class="videoContainer">
+        <video loop controls src="video/highJewerly/mosico.mp4"></video>
+    </div>
+    <div class="videoContainer">
+        <video loop controls src="video/highJewerly/sapire_lace.mp4"></video>
+    </div>
 </div>
 
 <script src="js/menuIMG.js"></script>
 <script src="js/highJewerly/main.js"></script>
+<script src="js/highJewerly/sc1slick.js"></script>
 <script src="js/highJewerly/sc04.js"></script>
+<script src="js/player.js"></script>
 
 </body>
 </html>

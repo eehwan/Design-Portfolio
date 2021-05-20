@@ -84,29 +84,6 @@
     opacity: 1;
 }
 
-#section02 .section02_all .center_box .bezero1_pre_next{
-    position: absolute;
-    left: 890px;
-    top: 130px;
-    display: flex;
-    flex-direction: row;
-}
-#section02 .section02_all .center_box .bezero1_pre_next >button{
-    all: unset;
-    font-size: 16px;
-    padding: 15px;
-    margin-right: 15px;
-    cursor: pointer;
-    color: rgb(180,180,180);
-}
-#section02 .section02_all .center_box .bezero1_pre_next >button:hover{
-    font-weight: bolder;
-    filter: invert(1);
-    text-decoration: underline;
-}
-#section02 .section02_all .center_box .bezero1_pre_next >button:active{
-    transform: translate(1px, 1px);
-}
 
 
 /* right_box */
@@ -123,27 +100,49 @@
     transform: translateX(0);
     opacity: 1;
 }
-/* img별 크기 차이로 생기는 여백 없애기 */
-#section02.on .right_box .right_txt_area >img{
-    transform: translateX(calc(154px - 100%));
-}
-
 
 
 .right_txt_slider{
     width: 141px;
     height: 50px;
     position: absolute;
-    right: 0;
-    top: -110px;
+    left: 170px;
+    top: -150px;
 }
-
-
-.right_txt_area{
+.right_txt_slider .right_txt_area{
     position: absolute;
-    left: 190px;
+    left: 170px;
     top: -120px;
     z-index: 6;
+}
+/* 오른쪽 정렬시 img별 크기 차이로 생기는 여백 없애기 */
+/* #section02.on .right_box .right_txt_area >img{
+    transform: translateX(calc(154px - 100%));
+} */
+
+#section02 .right_box .bezero1_pre_next{
+    position: absolute;
+    left: 150px;
+    top: -70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+#section02 .right_box .bezero1_pre_next >button{
+    all: unset;
+    font-size: 16px;
+    padding: 20px;
+    cursor: pointer;
+    color: rgb(180,180,180);
+}
+#section02 .section02_all .right_box .bezero1_pre_next >button:hover{
+    font-weight: bolder;
+    filter: invert(1);
+    text-decoration: underline;
+}
+#section02 .right_box .bezero1_pre_next >button:active{
+    transform: translate(1px, 1px);
 }
 
 
