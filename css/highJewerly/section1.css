@@ -8,7 +8,6 @@
 }
 #flag1{
     position: relative;
-    opacity: 0;
     width: 154px;
     height: 154px;
     transition: all linear 0s 0s;
@@ -109,12 +108,12 @@
 #section01 .img_box1_slider{
     position: relative;
     width: 500px;
-    height: 485px;
+    height: 430px;
 }
 #section01 .img_box1_slider .img_box1{
     position: relative;
     width: 351px;
-    height: 485px;
+    height: 430px;
 }
 #section01 .img_box1 .play_hover{
     position: relative;
@@ -124,6 +123,9 @@
     box-shadow: 40px 40px 60px 0px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     cursor: pointer;
+}
+#section01 .img_box1 .play_hover img{
+    transition: all .5s ease-in-out;
 }
 #section01 .img_box1 .play_hover:hover img{
     transition: all 1s ease-in-out;

@@ -3,11 +3,15 @@ body {
 }
 
 #cursor{
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 99999;
     pointer-events: none;
+}
+#cursor.on{
+    display: block;
 }
 #container{
     position: absolute;

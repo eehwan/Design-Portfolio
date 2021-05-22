@@ -70,40 +70,39 @@ const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
         }, delay);
     });
 }
-// // Section1 flag
-// const flag1 =  document.querySelector("#flag1"),
-//     play_hover = document.querySelector(".play_hover");
-// const flagWidth = 77,
-//     flagHeight = 77;
-// const handleFlag = (target, movArea) => {
-//     let $mouseX = 0,
-//         $mouseY = 0,
-//         dx = 0,
-//         dy = 0;
-//     const moveFlag = (target) => {
-//         // console.log("iters");
-//         dx += (($mouseX - dx) / 12);
-//         dy += (($mouseY - dy) / 12);
+// Section1 flag
+const handleFlag = (target, movArea) => {
+
+    const flagWidth = "77",
+        flagHeight = "77";
+    let $mouseX = 0,
+        $mouseY = 0,
+        dx = 0,
+        dy = 0;
+    const moveFlag = (target) => {
+        // console.log("iters");
+        dx += (($mouseX - dx) / 12);
+        dy += (($mouseY - dy) / 12);
         
-//         target.style.left = `${dx-flagWidth}px`;
-//         target.style.top = `${dy -flagHeight}px`;
-//     }
-//     movArea.addEventListener('mouseenter', (e) => {
-//         target.style.opacity = "1";
-//         target.style.left = `${e.pageX-flagWidth}px`;
-//         target.style.top = `${e.pageY -flagHeight}px`;
-//     });
-//     movArea.addEventListener('mousemove', (e) => {
-//         $mouseX = e.pageX;
-//         $mouseY = e.pageY;
-//         for (let i=0; i <30; i++) {
-//             setTimeout(() => moveFlag(target), 10);
-//         }
-//     });
-//     movArea.addEventListener('mouseleave', (e) => {
-//         flag.style.opacity = "0";
-//     });
-// }
+        target.style.left = `${dx-flagWidth}px`;
+        target.style.top = `${dy -flagHeight}px`;
+    }
+    movArea.addEventListener('mouseenter', (e) => {
+        target.parentNode.classList.add('on');
+        target.style.left = `${e.pageX-flagWidth}px`;
+        target.style.top = `${e.pageY -flagHeight}px`;
+    });
+    movArea.addEventListener('mousemove', (e) => {
+        $mouseX = e.pageX;
+        $mouseY = e.pageY;
+        for (let i=0; i <30; i++) {
+            setTimeout(() => moveFlag(target), 10);
+        }
+    });
+    movArea.addEventListener('mouseleave', (e) => {
+        target.parentNode.classList.remove('on');
+    });
+}
 
 
 const init = () => {
@@ -153,6 +152,7 @@ const init = () => {
     });
 
     detectSection(0);
+    handleFlag(document.querySelector("#flag1"), document.querySelector(".img_box1_slider"));
 }
 
 window.addEventListener('load', () => init());
