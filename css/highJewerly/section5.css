@@ -21,6 +21,18 @@
     flex-direction: column;
     position: relative;
 }
+#section05 .context >div >.img_box{
+    width: 528px;
+    height: 842px;
+    overflow: hidden;
+}
+#section05 .context >div >.img_box >img{
+    transition: all 1s ease-in-out;
+}
+#section05 .context >div:hover >.img_box >img{
+    transition: all 1s ease-in-out;
+    transform: scale(1.15);
+}
 #section05 .left{
     margin-right: 150px;
 }
