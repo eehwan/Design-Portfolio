@@ -178,18 +178,18 @@
     opacity: 1;
 }
 #section04 #changing .showing .title{
-    transition: all 1s ease-in-out;
+    transition: all 1.2s ease-in-out;
     opacity: 0;
-    transform: translateX(-250px);
+    transform: translateX(-60px);
 }
 #section04.on #changing .showing .title{
     opacity: 1;
     transform: translateX(0);
 }
 #section04 #changing #selector{
-    transition: all 1.2s ease-in-out;
+    transition: all 1s ease-in-out;
     opacity: 0;
-    transform: translateX(-800px);
+    transform: translateX(-400px);
 }
 #section04.on #changing #selector{
     opacity: 1;
@@ -198,7 +198,7 @@
 #section04 #changing .showing .img_box{
     transition: all 1.35s ease-in-out .15s;
     opacity: 0;
-    transform: translateX(300px);
+    transform: translateX(30px);
 }
 #section04.on #changing .showing .img_box{
     opacity: 1;

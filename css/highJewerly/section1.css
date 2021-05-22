@@ -163,39 +163,31 @@
     opacity: 1;
     transition: opacity 1s ease-in-out .3s;
 }
-#section01 .text_box .title{
-    transform: translateX(-200px);
+#section01 .left_box{
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: all 1s ease-in-out 0.1s;
+}
+#section01.on .left_box{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#section01 .img_box1_slider{
+    transform: translateY(20px);
     opacity: 0;
     transition: all .8s ease-in-out;
 }
-#section01.on .text_box .title{
+#section01.on .img_box1_slider{
     transform: translateX(0);
     opacity: 1;
 }
-#section01 .text_box .context{
-    transform: translateX(-350px);
+#section01 .img_box2_slider{
+    transform: translatex(80px);
     opacity: 0;
-    transition: all 1s ease-in-out;
+    transition: all 1.2s ease-in-out .3s;
 }
-#section01.on .text_box .context{
-    transform: translateX(0);
-    opacity: 1;
-}
-#section01 .img_box1{
-    transform: translateY(200px);
-    opacity: 0;
-    transition: all .8s ease-in-out;
-}
-#section01.on .img_box1{
-    transform: translateX(0);
-    opacity: 1;
-}
-#section01 .img_box2{
-    transform: translatex(400px);
-    opacity: 0;
-    transition: all 1.15s ease-in-out .15s;
-}
-#section01.on .img_box2{
+#section01.on .img_box2_slider{
     transform: translatex(0);
     opacity: 1;
 }

@@ -70,36 +70,36 @@
     opacity: 1;
 }
 #section03 .subtitle{
-    transition: all 1s ease-in-out;
+    transition: all .7s ease-in-out;
     opacity: 0;
-    transform: translateX(300px);
+    transform: translateX(20px);
 }
 #section03.on .subtitle{
     opacity: 1;
     transform: translateX(0);
 }
 #section03 .text_box {
-    transition: all 1s ease-in-out .2s;
+    transition: all 1s ease-in-out;
     opacity: 0;
-    transform: translateX(500px);
+    transform: translateX(50px);
 }
 #section03.on .text_box {
     opacity: 1;
     transform: translateX(0);
 }
 #section03 .img_1{
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out .3s;
     opacity: 0;
-    transform: translatex(-200px);
+    transform: translatex(-100px);
 }
 #section03.on .img_1{
     opacity: 1;
     transform: translatex(0);
 }
 #section03 .img_2{
-    transition: all 1s ease-in-out .2s;
+    transition: all 1s ease-in-out .15s;
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateY(30px);
 }
 #section03.on .img_2{
     opacity: 1;
