@@ -74,13 +74,25 @@
 }
 #section06 .contents #searchRecommand{
     /* display: none; */
+    max-width: 368px;
     opacity: 0;
     transform: translateY(-20px);
-    transition: all .5s;
-    pointer-events: none;
+    cursor: pointer;
 }
 #section06 .contents #searchRecommand.on{
-    display: block;
+    /* display: flex;
+    flex-direction: column; */
     opacity: 1;
     transform: translateY(0);
+    transition: all .5s;
+}
+#section06 .contents #searchRecommand >div{
+    display: none;
+    transition: all 1s;
+}
+#section06 .contents #searchRecommand.on1 #searchRecommand1{
+    display: block;
+}
+#section06 .contents #searchRecommand.on2 #searchRecommand2{
+    display: block;
 }

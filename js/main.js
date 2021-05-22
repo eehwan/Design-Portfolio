@@ -142,13 +142,32 @@ window.addEventListener('DOMContentLoaded', () => {
     })
     // 검색창
     const searchInput = document.querySelector('#searchInput'),
-        searchRecommand = document.querySelector('#searchRecommand'); 
-    searchInput.addEventListener('focus', () => {
+        searchRecommand = document.querySelector('#searchRecommand'),
+        contents = document.querySelector('#section06 .contents'); 
+    // const changeRecommand = () => {
+    //     searchInput.focus()
+    //     searchRecommand1.classList.remove('on');
+    //     searchRecommand2.classList.add('on');
+    // }
+    searchInput.addEventListener('click', () => {
         searchRecommand.classList.add('on');
+        searchRecommand.classList.add('on1');
+        
+        searchRecommand.addEventListener('click', () => {
+            searchInput.focus();
+            if (searchRecommand.classList.contains("on1")){
+                searchRecommand.className = "on2";
+            }
+            else{
+                searchRecommand.className = "on1";
+            }
+            searchRecommand.classList.add('on');
+        });
     });
     searchInput.addEventListener('blur', () => {
-        setTimeout(()=>searchRecommand.classList.remove('on'), 1000);
+        searchRecommand.classList.remove("on")
     });
+
 
    
     /*
