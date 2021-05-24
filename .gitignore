@@ -1,4 +1,5 @@
 __MACOSX
-__MACOSX
+__MACOSX/
 .DS_Store
 tmp
+tmp/
