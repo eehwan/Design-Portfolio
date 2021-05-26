@@ -16,8 +16,8 @@
 /* button */
 #section01 .slider-control{
     position: absolute;
-    left: 60px;
-    bottom: 150px;
+    left: 315px;
+    bottom: 70px;
     display: flex;
     flex-direction: column;
     z-index: 5;
@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     bottom: 150px;
-    left: 1080px;
+    left: 1180px;
     padding: 20px;
     cursor: pointer;
     z-index: 5;
@@ -52,42 +52,22 @@
 }
 
 
-/* text_box */
-#section01 .right_box{
+/* left_box */
+#section01 .left_box{
     position: absolute;
-    left: 1100px;
+    left: 350px;
+    bottom: 70px;
 }
-#section01 .text_box_slider{
+#section01 .img_box1_slider{
     position: relative;
-    width: 750px;
-    height: 740px;
-}
-#section01 .text_box_slider .text_box{
-    position: relative;
-    width: 750px;
-    height: 740px;
-}
-#section01 .text_box .title{
-    position: relative;
-    top: 100px;
-}
-#section01 .text_box .title >img:last-child{
-    position: relative;
-    left: 400px;
-    bottom: 30px; 
-}
-#section01 .text_box .context{
-    position: relative;
-    top: 260px;
-}
-#section01 .text_box .context img{
-    margin-bottom: 50px;
+    width: 520px;
+    height: 730px;
 }
 
-/* img_box2 */
+/* center_box */
 #section01 .center_box{
     position: absolute;
-    left: 700px;
+    left: 800px;
     top: 400px;
     z-index: 1;
 }
@@ -101,7 +81,6 @@
     width: 336px;
     height: 361px;
     overflow: hidden;
-    cursor: pointer;
 }
 #section01 .img_box2 img{
     transition: all .5s ease-in-out;
@@ -110,16 +89,32 @@
     transform: scale(1.1);
 }
 
-/* img_box1 */
-#section01 .left_box{
+/* right_box */
+#section01 .right_box{
     position: absolute;
-    left: 300px;
-    bottom: 0;
+    left: 1050px;
+    top: 100px;
 }
-#section01 .img_box1_slider{
+#section01 .title_box_slider{
     position: relative;
-    width: 438px;
-    height: 726px;
+    width: 386px;
+    height: 173px;
+}
+#section01 .right_box .next_to_title{
+    position: absolute;
+    left: 350px;
+    top: 40px; 
+}
+#section01 .right_box .context{
+    position: relative;
+    top: 135px;
+    left: 150px;
+}
+#section01 .right_box .context img:first-child{
+    margin-bottom: 20px;
+}
+#section01 .right_box .context img:nth-child(2){
+    margin-bottom: 50px;
 }
 
 /* scroll transition */

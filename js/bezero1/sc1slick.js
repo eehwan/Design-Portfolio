@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
         autoplaySpeed: 2000, // auto speed
         pauseOnHover: false, // pause on mouse hover
         fade: true, //fade mode only one slider
-        speed: 1000, // speed
+        speed: 1200, // speed
         infinite: true, // infinite mode
         // asNavFor: '#section02 .center_img_slider',// another slider
         centerMode: false, // center move
@@ -30,10 +30,10 @@ window.addEventListener('DOMContentLoaded', () => {
         prevArrow: $('#section01 .prevBtn'), //prev
         nextArrow: $('#section01 .nextBtn'), //next
         autoplay: true, // autoplay mode
-        autoplaySpeed: 2000, // auto speed
+        autoplaySpeed: 3000, // auto speed
         pauseOnHover: false, // pause on mouse hover
         fade: true, //fade mode only one slider
-        speed: 1000, // speed
+        speed: 1200, // speed
         infinite: true, // infinite mode
         asNavFor: '#section01 .title_box_slider, #section01 .img_box2_slider, #flag1', // another slider
         centerMode: false, // center move
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
         autoplaySpeed: 2000, // auto speed
         pauseOnHover: false, // pause on mouse hover
         fade: true, //fade mode only one slider
-        speed: 1000, // speed
+        speed: 1200, // speed
         infinite: true, // infinite mode
         // asNavFor: '#section02 .center_img_slider', // another slider
         centerMode: false, // center move

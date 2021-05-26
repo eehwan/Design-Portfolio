@@ -26,50 +26,6 @@ const controlScroll = (e, targetElement, targetHeight) => {
     detectSection(destination);
 };
 
-// slider
-const makeSlider = (targetTag, nextBtnTag, previousBtnTag, delay=3000) => {
-    const target = document.querySelector(targetTag);
-    target.innerHTML = target.innerHTML.replace(/(\n((\t| ){0,})){1,}/g, '');
-    const childNodes = Array.from(target.childNodes)
-    
-    let i = 0
-    childNodes[i].classList.add("on");
-    const changSlide = () => {
-        if (i >= childNodes.length){i = 0}
-        if (i == -1){i = childNodes.length-1}
-        childNodes.forEach(element => {
-            console.log(element, childNodes)
-            element.classList.remove('on');
-        });
-        childNodes[i].classList.add("on");
-    }
-    let timer = setInterval(() => {
-        i += 1
-        changSlide(i);
-    }, delay);
-    
-    const nextBtn = document.querySelector(nextBtnTag),
-    previousBtn = document.querySelector(previousBtnTag);
-    
-    nextBtn.addEventListener('click', () => {
-        clearInterval(timer);
-        i += 1;
-        changSlide();
-        timer = setInterval(() => {
-            i += 1
-            changSlide(i);
-        }, delay);
-    });
-    previousBtn.addEventListener('click', () => {
-        clearInterval(timer);
-        i -= 1;
-        changSlide();
-        timer = setInterval(() => {
-            i += 1
-            changSlide(i);
-        }, delay);
-    });
-}
 // Section1 flag
 const handleFlag = (target, movArea) => {
 
@@ -109,9 +65,6 @@ const init = () => {
     window.addEventListener('resize', (e) => {
         containerHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
     })    
-    // makeSlider("#section01 .text_box_slider", "#section01 .nextBtn", "#section01 .prevBtn");
-    // makeSlider("#section01 .img_box1_slider", "#section01 .nextBtn", "#section01 .prevBtn");
-    // makeSlider("#section01 .img_box2_slider", "#section01 .nextBtn", "#section01 .prevBtn");
     // 맨위로
     topbutton.addEventListener('click', () => {
         container.scrollTo({ top: 0, behavior: "smooth", });
@@ -156,36 +109,3 @@ const init = () => {
 }
 
 window.addEventListener('load', () => init());
-
-// const cursorWidth = 77,
-//     cursorHeight = 77;
-// const controlCursor = (e) => {
-//     console.log(e);
-//     cursor.style.left = `${e.pageX-cursorWidth}px`;
-//     cursor.style.top = `${e.pageY -cursorHeight}px`;
-// }
-
-// console.log(mov1, mov2, mov3);
-// mov1.addEventListener('mousemove', (e) => {
-//     cursor.classList.add('mov1');
-//     controlCursor(e);
-// });
-// mov1.addEventListener('mouseout', () => {
-//     cursor.classList.remove('mov1');
-// });
-// mov2.addEventListener('mousemove', (e) => {
-//     cursor.classList.add('mov2');
-//     controlCursor(e);
-// });
-// mov2.addEventListener('mouseout', () => {
-//     cursor.classList.remove('mov2');
-//     console.log("22");
-// });
-// mov3.addEventListener('mousemove', (e) => {
-//     cursor.classList.add('mov3');
-//     controlCursor(e);
-// });
-// mov3.addEventListener('mouseout', () => {
-//     cursor.classList.remove('mov3');
-//     console.log("33");
-// });

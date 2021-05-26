@@ -1,0 +1,39 @@
+/* left */
+#section02 .left{
+    position: absolute;
+    width: 945px;
+    height: 100vh;
+}
+
+
+/* slider */
+#section02 .slider{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+#section02 .slider .slide:nth-child(1){
+    margin-left: 50px;
+}
+#section02 .slider .slide{
+    margin-right: 50px;
+}
+#section02 .slider .slide{
+    width: 400px;
+    height: 400px;
+}
+#section02 .slider .slide .img{
+    width: 400px;
+    height: 400px;
+}
+#section02 .slider .slide .img{
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+}
+
+
+/* right */
+#section02 .right{
+    position: absolute;
+}
