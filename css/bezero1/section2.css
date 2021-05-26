@@ -11,29 +11,44 @@
     position: absolute;
     display: flex;
     flex-direction: row;
+    left: 600px;
+    top: 10vh;
+    width: calc(100vw - 600px);
+    overflow-x: scroll;
 }
 #section02 .slider .slide:nth-child(1){
-    margin-left: 50px;
+    margin-left: 100px;
 }
 #section02 .slider .slide{
-    margin-right: 50px;
-}
-#section02 .slider .slide{
-    width: 400px;
-    height: 400px;
+    margin-right: 100px;
+    position: relative;
 }
 #section02 .slider .slide .img{
-    width: 400px;
-    height: 400px;
+    width: 424px;
+    height: 416px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
 }
-#section02 .slider .slide .img{
+#section02 .slider .slide .text{
     position: absolute;
-    bottom: 0;
-    left: -20px;
+    bottom: 10px;
+    left: -50px;
 }
 
 
 /* right */
 #section02 .right{
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 1050px;
+    bottom: 75px;
+    align-items: center;
+    justify-content: center;
+}
+#section02 .right .context{
+    padding-bottom: 50px;
+    margin-right: 200px;
 }
