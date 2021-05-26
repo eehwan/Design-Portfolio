@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-     $("#section01 .text_box_slider").slick({
+     $("#section01 .title_box_slider").slick({
         dots: false, //navigation
         arrows: false, //arrow
         // prevArrow: $('#sc2_prev'), //prev
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
         fade: true, //fade mode only one slider
         speed: 1000, // speed
         infinite: true, // infinite mode
-        asNavFor: '#section01 .text_box_slider, #section01 .img_box2_slider, #flag1', // another slider
+        asNavFor: '#section01 .title_box_slider, #section01 .img_box2_slider, #flag1', // another slider
         centerMode: false, // center move
         centerPadding: '0%', // center move padding
         slidesToShow: 1, // show slider number

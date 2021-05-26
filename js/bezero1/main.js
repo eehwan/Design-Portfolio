@@ -152,7 +152,7 @@ const init = () => {
     });
 
     detectSection(0);
-    handleFlag(document.querySelector("#flag1"), document.querySelector(".img_box1_slider"));
+    handleFlag(document.querySelector("#flag1"), document.querySelector(".img_box2_slider"));
 }
 
 window.addEventListener('load', () => init());
