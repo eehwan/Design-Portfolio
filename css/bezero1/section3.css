@@ -6,11 +6,15 @@
     background-size: cover;
 }
 
-
-#section03 .main_container{
+#section03 .upper{
     position: absolute;
     top: 200px;
     left: 300px;
+}
+#section03 .main_container{
+    position: relative;
+    width: 626px;
+    height: 450px;
 }
 #section03 .main_container .main{
     width: 626px;
@@ -18,35 +22,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    display: none;
-}
-#section03 .main_container .main.on{
-    display: flex;
 }
 
-
-#section03 .tab{
+#section03 .under{
     position: absolute;
     bottom: 100px;
-    left: 350px;
+    left: 380px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-#section03 .tab >*{
+#section03 .under .tab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin: 15px;
 }
-#section03 .tab >.tab_ui{
+#section03 .under .tab >*{
     margin: 15px;
-    opacity: 0.6;
 }
-#section03 .tab >.tab_ui.on{
+#section03 .under .tab >.tab_ui{
+    margin: 15px;
+    opacity: 0.5;
+}
+#section03 .under .tab >.tab_ui.on{
     border: 1px solid orange;
     opacity: 1;
 }
-
+#section03 .under #sc3_prev, #sc3_next{
+    cursor: pointer;
+}
+#section03 .under #sc3_prev:active, #sc3_next:active{
+    transform: translateY(2px);
+    transition: all .7s ease-in-out;
+}
 
 #section03 .text_box{
     position: absolute;
@@ -73,10 +84,13 @@
     height: 100%;
     background-color: black;
 }
-
+#section03 .text_box .progress.on .bar .trimPath{
+    width: 100%;
+    transition: all 1s ease-in-out .3s;
+}
 
 #section03 .scroll{
     position: absolute;
     right: calc(50vw - 30px);
-    bottom: -50px;
+    bottom: -30px;
 }

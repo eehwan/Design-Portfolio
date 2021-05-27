@@ -1,13 +1,17 @@
 #section04 .title_box{
     position: absolute;
     top: 80px;
-    left: calc(50vw - 175px);
+    left: calc(50% - 175px);
 }
+#section04 .title_box >*{
+    margin-bottom: 10px;
+}
+
 
 #section04 .box_container{
     position: absolute;
-    top: 150px;
-    left: 300px;
+    top: 250px;
+    left: calc(50% - 734px);
     display: flex;
     flex-direction: row;
 }
@@ -17,9 +21,15 @@
     align-items: center;
     justify-content: center;
 }
-
+#section04 .box_container .box >*{
+    margin-bottom: 25px;
+}
+#section04 .box_container .box .button:hover{
+    filter: invert(1);
+    cursor: pointer;
+}
 #section04 .indicator{
     position: absolute;
     bottom: 50px;
-    left: calc(50vw - 105px);
+    left: calc(50% - 105px);
 }

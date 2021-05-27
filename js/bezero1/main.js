@@ -81,11 +81,11 @@ const init = () => {
         mega.classList.remove('on');
     });
     const sc1Btn = document.querySelector("#section01 .button");
-    // 컬렉션 자세히보기
-    // sc1Btn.addEventListener('click', ()=> {
-    //     container.scrollTo({ top: containerHeight * 3, behavior: "smooth", });
-    //     detectSection(3);
-    // })
+    // 제품 자세히보기
+    sc1Btn.addEventListener('click', ()=> {
+        container.scrollTo({ top: containerHeight * 3, behavior: "smooth", });
+        detectSection(3);
+    })
     // scrolling
     let wheeling = undefined;
     container.addEventListener('wheel', (e) => {

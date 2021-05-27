@@ -34,7 +34,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    bottom: 150px;
+    bottom: 200px;
     left: 1180px;
     padding: 20px;
     cursor: pointer;
@@ -93,7 +93,7 @@
 #section01 .right_box{
     position: absolute;
     left: 1050px;
-    top: 100px;
+    top: 140px;
 }
 #section01 .title_box_slider{
     position: relative;
@@ -107,7 +107,7 @@
 }
 #section01 .right_box .context{
     position: relative;
-    top: 135px;
+    top: 100px;
     left: 150px;
 }
 #section01 .right_box .context img:first-child{
