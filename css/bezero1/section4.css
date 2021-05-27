@@ -1,0 +1,25 @@
+#section04 .title_box{
+    position: absolute;
+    top: 80px;
+    left: calc(50vw - 175px);
+}
+
+#section04 .box_container{
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    display: flex;
+    flex-direction: row;
+}
+#section04 .box_container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#section04 .indicator{
+    position: absolute;
+    bottom: 50px;
+    left: calc(50vw - 105px);
+}
