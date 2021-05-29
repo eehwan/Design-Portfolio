@@ -15,6 +15,14 @@
     top: 10vh;
     width: calc(100vw - 600px);
     overflow-x: scroll;
+    overscroll-behavior: none;
+}
+#section02 .slider{
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+#section02 .slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
 }
 #section02 .slider .slide:nth-child(1){
     margin-left: 100px;
@@ -29,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aliceblue;
+    background-color: #f4f4f4;
 }
 #section02 .slider .slide .text{
     position: absolute;

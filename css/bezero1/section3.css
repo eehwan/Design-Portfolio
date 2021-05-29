@@ -55,8 +55,7 @@
     cursor: pointer;
 }
 #section03 .under #sc3_prev:active, #sc3_next:active{
-    transform: translateY(2px);
-    transition: all .7s ease-in-out;
+    transform: translateY(1.5px);
 }
 
 #section03 .text_box{

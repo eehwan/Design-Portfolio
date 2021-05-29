@@ -9,6 +9,7 @@ const sections = document.getElementsByTagName("section"),
 sectionsArray = Array.from(sections);
 
 const detectSection = (destination) => {
+    // destination번째 항목에 classList.add('on')
     for (let n = 0; n < sectionsArray.length; n++){
         if (n == destination){
             setTimeout(()=> sectionsArray[n].classList.add("on"), 300);
@@ -88,7 +89,7 @@ const init = () => {
     })
     // scrolling
     let wheeling = undefined;
-    container.addEventListener('wheel', (e) => {
+    const controlWheel = (e) => {
         e.preventDefault();
         // scroll start시 실행
         if(!wheeling){
@@ -102,7 +103,32 @@ const init = () => {
             // console.log("stop wheeling !");
             wheeling = undefined;
         }, 350);
+    }
+    container.addEventListener('wheel', controlWheel);
+
+    // sc2 좌우 스크롤
+    const sc2Slider = document.querySelector("#section02 .slider");
+    sc2Slider.addEventListener('mouseenter', () => {
+        container.removeEventListener('wheel', controlWheel);
     });
+    sc2Slider.addEventListener('mouseleave', () => {
+        container.addEventListener('wheel', controlWheel);
+    });
+    sc2Slider.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        sc2Slider.scrollTo({top: 0, left: sc2Slider.scrollLeft - e.wheelDelta*2});
+    })
+    // $("#section02 slider").on('mousewheel',(e) => {
+    //     console.log("wheel")
+    //     let wheelDelta = e.originalEvent.wheelDelta;
+    //     if(wheelDelta > 0){
+    //         console.log("up");
+    //         $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+    //     }else{
+    //         console.log("down");
+    //         $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+    //     }
+    // })
 
     detectSection(0);
     // handleFlag(document.querySelector("#flag1"), document.querySelector(".img_box2_slider"));
