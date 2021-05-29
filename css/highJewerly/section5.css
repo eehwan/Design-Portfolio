@@ -42,6 +42,43 @@
     right: 200px;
 }
 
+
+#section05 .underline1{
+    position: absolute;
+    top: 75px;
+    left: 35px;
+    height: 2px;
+    width: 0px;
+    background-color: blue;
+    z-index: 2;
+}
+#section05 .underline2{
+    position: absolute;
+    top: 120px;
+    left: 35px;
+    height: 2px;
+    width: 0px;
+    background-color: blue;
+    z-index: 2;
+}
+#section05 .right .underline1, #section05 .right .underline2{
+    left: 60px !important;
+    background-color: red !important;
+}
+#section05 .context .left:hover .underline1{
+    width: 250px;
+    transition: all .7s ease-in-out;
+}
+#section05 .context .right:hover .underline1{
+    width: 275px;
+    transition: all .7s ease-in-out;
+}
+#section05 .context >div:hover .underline2{
+    width: 120px;
+    transition: all .3s ease-in-out .7s;
+}
+
+
 #section05 .text_box .button{
     position: absolute;
     left: 60px;
