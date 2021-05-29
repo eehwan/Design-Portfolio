@@ -27,7 +27,7 @@
 #section03 .under{
     position: absolute;
     bottom: 100px;
-    left: 380px;
+    left: 370px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -52,6 +52,7 @@
     opacity: 1;
 }
 #section03 .under #sc3_prev, #sc3_next{
+    padding: 10px;
     cursor: pointer;
 }
 #section03 .under #sc3_prev:active, #sc3_next:active{
@@ -85,7 +86,7 @@
 }
 #section03 .text_box .progress.on .bar .trimPath{
     width: 100%;
-    transition: all 1s ease-in-out .3s;
+    transition: all .8s ease-in-out .1s;
 }
 
 #section03 .scroll{
