@@ -117,18 +117,7 @@ const init = () => {
     sc2Slider.addEventListener('wheel', (e) => {
         e.preventDefault();
         sc2Slider.scrollTo({top: 0, left: sc2Slider.scrollLeft - e.wheelDelta*2});
-    })
-    // $("#section02 slider").on('mousewheel',(e) => {
-    //     console.log("wheel")
-    //     let wheelDelta = e.originalEvent.wheelDelta;
-    //     if(wheelDelta > 0){
-    //         console.log("up");
-    //         $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
-    //     }else{
-    //         console.log("down");
-    //         $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
-    //     }
-    // })
+    });
 
     detectSection(0);
     // handleFlag(document.querySelector("#flag1"), document.querySelector(".img_box2_slider"));

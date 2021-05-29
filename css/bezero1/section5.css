@@ -26,11 +26,48 @@
     height: 842px;
     overflow: hidden;
 }
+
+
+#section05 .underline1{
+    position: absolute;
+    top: 75px;
+    left: 35px;
+    height: 2px;
+    width: 0px;
+    background-color: blue;
+    z-index: 2;
+}
+#section05 .underline2{
+    position: absolute;
+    top: 120px;
+    left: 35px;
+    height: 2px;
+    width: 0px;
+    background-color: blue;
+    z-index: 2;
+}
+#section05 .right .underline1, #section05 .right .underline2{
+    left: 60px !important;
+    background-color: red !important;
+}
+#section05 .context .left:hover .underline1{
+    width: 190px;
+    transition: all .7s ease-in-out;
+}
+#section05 .context .right:hover .underline1{
+    width: 240px;
+    transition: all .7s ease-in-out;
+}
+#section05 .context >div:hover .underline2{
+    width: 120px;
+    transition: all .3s ease-in-out .7s;
+}
+
 #section05 .context >div >.img_box >img{
     transition: all 1s ease-in-out;
 }
 #section05 .context >div:hover >.img_box >img{
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out .2s;
     transform: scale(1.15);
 }
 #section05 .left{
