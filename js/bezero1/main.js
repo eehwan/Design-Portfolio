@@ -18,6 +18,12 @@ const detectSection = (destination) => {
             setTimeout(()=> sectionsArray[n].classList.remove("on"), 300);
         }
     }
+    if (destination==1){
+        document.querySelector(".logo").style.filter = "invert(1)";
+        console.log(destination)
+    }else{
+        document.querySelector(".logo").style.filter = "invert(0)";
+    }
 }
 
 // scroll control

@@ -129,7 +129,7 @@
     transform: translateY(0);
 }
 #section05 .img_box{
-    transition: all 2s ease .25s;
+    transition: all 1.5s ease-in .25s;
     opacity: 0;
 }
 #section05.on .img_box{
