@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     left: 225px;
-    top: 150px;
+    top: 130px;
 }
 #section04 #changing .showing .title >div{
     margin-bottom: 30px;
@@ -102,7 +102,7 @@
     flex-direction: row;
     position: absolute;
     left: 225px;
-    top: 470px;
+    top: 420px;
     z-index: 5;
 }
 #section04 #changing #selector .selectee{

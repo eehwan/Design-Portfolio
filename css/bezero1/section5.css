@@ -34,7 +34,7 @@
     left: 35px;
     height: 2px;
     width: 0px;
-    background-color: blue;
+    background-color: #0a4a94;
     z-index: 2;
 }
 #section05 .underline2{
@@ -43,31 +43,31 @@
     left: 35px;
     height: 2px;
     width: 0px;
-    background-color: blue;
+    background-color: #0a4a94;
     z-index: 2;
 }
 #section05 .right .underline1, #section05 .right .underline2{
     left: 60px !important;
-    background-color: red !important;
+    background-color: #ac0114 !important;
 }
 #section05 .context .left:hover .underline1{
     width: 190px;
-    transition: all .7s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 #section05 .context .right:hover .underline1{
     width: 240px;
-    transition: all .7s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 #section05 .context >div:hover .underline2{
     width: 120px;
-    transition: all .3s ease-in-out .7s;
+    transition: all .4s ease-in-out .9s;
 }
 
 #section05 .context >div >.img_box >img{
     transition: all 1s ease-in-out;
 }
 #section05 .context >div:hover >.img_box >img{
-    transition: all 1s ease-in-out .2s;
+    transition: all 1.5s ease-in-out .3s;
     transform: scale(1.15);
 }
 #section05 .left{
