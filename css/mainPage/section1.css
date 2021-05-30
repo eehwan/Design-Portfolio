@@ -227,20 +227,15 @@ svg clippath text {
 
 /* right_box */
 #section01 .right_box{
-    /* opacity: 0; */
-    transition: opacity 1s linear 2s;
+    opacity: 0;
 }
-/* #section01.on .right_box{
-    opacity: 1;
-} */
+#section01.on .right_box{
+   animation: fadeIn 1.2s ease-in forwards .35s;
+}
 #section01 #right_slider{
     width: 812px;
     height: 100vh;
     position: relative;
-    opacity: 0;
-}
-#section01.on #right_slider{
-   animation: fadeIn 1.2s linear forwards .5s;
 }
 #section01 .right_box .dark-area_1{
     position: absolute;
