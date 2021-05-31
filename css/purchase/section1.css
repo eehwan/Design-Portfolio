@@ -1,0 +1,72 @@
+#section01 .background{
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height: 500px;
+    background-image: url("../../image/sub_purchase/sec01/marble_texture.jpg");
+    background-size: cover;
+}
+
+#section01 .upper{
+    position: absolute;
+    top: 280px;
+    left: 500px;
+}
+#section01 .main_container{
+    position: relative;
+    width: 350px;
+    height: 371px;
+}
+#section01 .main_container .main{
+    width: 626px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section01 .under{
+    position: absolute;
+    bottom: 20px;
+    left: 425px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#section01 .under .tab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+#section01 .under .tab >*{
+    margin: 15px;
+}
+#section01 .under .tab >.tab_ui{
+    margin: 15px;
+    opacity: 0.5;
+    border: 2px solid silver;
+}
+#section01 .under .tab >.tab_ui.on{
+    border: 2px solid orange;
+    opacity: 1;
+}
+#section01 .under #sc3_prev, #sc3_next{
+    padding: 10px;
+    cursor: pointer;
+}
+#section01 .under #sc3_prev:active, #sc3_next:active{
+    transform: translateY(1.5px);
+}
+
+#section01 .text_box{
+    position: absolute;
+    right: 400px;
+    top: 350px;
+}
+#section01 .text_box >img{
+    margin-bottom: 50px;
+    cursor: pointer;
+}
