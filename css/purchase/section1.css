@@ -61,12 +61,74 @@
     transform: translateY(1.5px);
 }
 
-#section01 .text_box{
+#section01 .right{
     position: absolute;
-    right: 400px;
-    top: 350px;
+    right: 300px;
+    top: 215px;
 }
-#section01 .text_box >img{
-    margin-bottom: 50px;
-    cursor: pointer;
+#section01 .right .title_box{
+    position: relative;
+}
+#section01 .right .title_box >img:nth-child(2){
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#section01 .right .title_box .shopping_bag{
+    position: absolute;
+    bottom: 15px;
+    right: 35px;
+}
+#section01 .right .title_box .shopping_bag >img:nth-child(2){
+    display: none;
+}
+#section01 .right .title_box .shopping_bag:active >img:nth-child(1){
+    display: none;
+}
+#section01 .right .title_box .shopping_bag:active >img:nth-child(2){
+    display: block;
+}
+#section01 .right .title_box .heart{
+    position: absolute;
+    bottom: 15px;
+    right: 0px;
+}
+#section01 .right .title_box .heart >img:nth-child(2){
+    display: none;
+}
+#section01 .right .title_box .heart:active >img:nth-child(1){
+    display: none;
+}
+#section01 .right .title_box .heart:active >img:nth-child(2){
+    display: block;
+}
+
+#section01 .right .text{
+    margin-bottom: 30px;
+}
+#section01 .right .color{
+    margin-top: 10px;
+}
+#section01 .right #ringForm{
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+#section01 .right #ringForm select{
+    font-size: 1.05em;
+    margin-right: 30px;
+    padding: 0.65em 6.5em 0.65em 1.5em;
+}
+#section01 .right #ringForm select:last-child{
+    margin-right: 0px;
+}
+#section01 .right .size_guide{
+    text-decoration: underline;
+    margin-top: 30px;
+}
+#section01 .right .button{
+    margin-top: 90px;
+}
+#section01 .right .button_under{
+    margin-top: 10px;
+    margin-left: 30px;
+    padding: 10px
 }
