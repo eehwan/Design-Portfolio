@@ -1,3 +1,12 @@
+@keyframes arrowMove {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(10px);
+    }
+}
+
 #section01 .background{
     position: absolute;
     top: 120px;
@@ -125,7 +134,17 @@
     margin-top: 30px;
 }
 #section01 .right .button{
+    position: relative;
+    display: inline-block;
     margin-top: 90px;
+}
+#section01 .right .button .arrow{
+    position: absolute;
+    top: calc(32px - 4px);
+    right: 27px;
+}
+#section01 .right .button:hover .arrow{
+    animation: arrowMove .7s ease-in-out infinite 0s;
 }
 #section01 .right .button_under{
     margin-top: 10px;
