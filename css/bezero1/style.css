@@ -54,35 +54,3 @@ section{
     top: calc(50% - 100px);
     z-index: 5;
 }
-
-.pop{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    z-index: -1;
-    transition: all .5s;
-}
-.pop.on{
-    /* display: block; */
-    opacity: 1;
-    z-index: 999999;
-}
-.pop .videoContainer{
-    display: none;
-}
-.pop.video1 .videoContainer:nth-child(1){
-    display: inline-block;
-}
-.pop.video2 .videoContainer:nth-child(2){
-    display: inline-block;
-}
-.pop.video3 .videoContainer:nth-child(3){
-    display: inline-block;
-}
