@@ -58,10 +58,23 @@
     transition: all .4s ease-in-out .9s;
 }
 
-#section04 .context >div >.img_box >img{
-    transition: all 1s ease-in-out;
+#section04 .context >div >.img_box >div{
+    position: absolute;
+    /* width: 528px;
+    height: 842px; */
+    overflow: hidden;
+    transition: opacity 1s ease-in;
 }
-#section04 .context >div:hover >.img_box >img{
+#section04 .context >div >.img_box .img2{
+    opacity: 0;
+}
+#section04 .context >div:hover >.img_box .img1{
+    opacity: 0;
+}
+#section04.on .context >div:hover >.img_box .img2{
+    opacity: 1;
+}
+#section04.on .context >div:hover >.img_box .img2 >img{
     transition: all 1.5s ease-in-out .3s;
     transform: scale(1.15);
 }
