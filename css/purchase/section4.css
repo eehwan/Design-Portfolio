@@ -74,8 +74,10 @@
 #section04.on .context >div:hover >.img_box .img2{
     opacity: 1;
 }
-#section04.on .context >div:hover >.img_box .img2 >img{
+#section04.on .context >div >.img_box .img2 >img{
     transition: all 1.5s ease-in-out .3s;
+}
+#section04.on .context >div:hover >.img_box .img2 >img{
     transform: scale(1.15);
 }
 #section04 .left{
