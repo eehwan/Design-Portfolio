@@ -3,8 +3,12 @@
     position: absolute;
     width: 945px;
     height: 100vh;
+    overflow: hidden;
 }
-
+#section02 .left video{
+    height: 100%;
+    transform: translateX(-20%);
+}
 
 /* slider */
 #section02 .slider{
