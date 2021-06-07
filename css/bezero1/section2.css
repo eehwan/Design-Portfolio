@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 /* left */
 #section02 .left{
     position: absolute;
@@ -63,4 +68,30 @@
 #section02 .right .context{
     padding-bottom: 50px;
     margin-right: 200px;
+}
+
+/* scroll transition */
+#section02 .left{
+    opacity: 0;
+}
+#section02.on .left{
+    animation: fadeIn 1.2s ease-in forwards;
+}
+#section02 .slider{
+    opacity: 0;
+    transform: translateX(600px);
+}
+#section02.on .slider{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s ease-in-out .3s;
+}
+#section02 .right{
+    opacity: 0;
+    transform: translateY(150px);
+}
+#section02.on .right{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 1s ease-in-out .15s;
 }
