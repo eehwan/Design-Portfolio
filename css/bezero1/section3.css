@@ -94,3 +94,49 @@
     right: calc(50vw - 30px);
     bottom: -30px;
 }
+
+
+/* scroll transition */
+#section03 .background{
+    opacity: 0;
+}
+#section03.on .background{
+    opacity: 1;
+    transition: all 2s ease-in .2s;
+}
+#section03 .upper{
+    opacity: 0;
+    transform: translateY(-80px);
+}
+#section03.on .upper{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 1s ease-in .5s;
+}
+#section03 .under{
+    opacity: 0;
+    transform: translateY(80px);
+}
+#section03.on .under{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 1s ease-in .2s;
+}
+#section03 .text_box{
+    opacity: 0;
+    transform: translateX(100px);
+}
+#section03.on .text_box{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s ease-in-out;
+}
+#section03 .scroll{
+    opacity: 0;
+    transform: translateY(-20px);
+}
+#section03.on .scroll{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 1.5s ease-in-out 1s;
+}

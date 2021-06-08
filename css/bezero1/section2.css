@@ -75,7 +75,7 @@
     opacity: 0;
 }
 #section02.on .left{
-    animation: fadeIn 1.2s ease-in forwards;
+    animation: fadeIn 1.5s ease-in forwards .3s;
 }
 #section02 .slider{
     opacity: 0;
@@ -88,7 +88,7 @@
 }
 #section02 .right{
     opacity: 0;
-    transform: translateY(150px);
+    transform: translateY(100px);
 }
 #section02.on .right{
     opacity: 1;
