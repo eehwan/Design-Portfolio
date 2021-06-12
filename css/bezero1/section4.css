@@ -38,7 +38,7 @@
 /* scroll transition */
 #section04 .title_box{
     opacity: 0;
-    transform: translateY(-150px);
+    transform: translateY(-80px);
 }
 #section04.on .title_box{
     opacity: 1;
@@ -47,27 +47,27 @@
 }
 #section04 .box_container .box{
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(150px);
 }
 #section04.on .box_container .box:nth-child(1){
     opacity: 1;
     transform: translateY(0);
-    transition: all 1s ease-in;
+    transition: all .65s ease-in;
 }
 #section04.on .box_container .box:nth-child(2){
     opacity: 1;
     transform: translateY(0);
-    transition: all 1s ease-in .2s;
+    transition: all .65s ease-in .3s;
 }
 #section04.on .box_container .box:nth-child(3){
     opacity: 1;
     transform: translateY(0);
-    transition: all 1s ease-in .4s;
+    transition: all .65s ease-in .6s;
 }
 #section04.on .box_container .box:nth-child(4){
     opacity: 1;
     transform: translateY(0);
-    transition: all 1s ease-in .6s;
+    transition: all .65s ease-in .9s;
 }
 #section04 .indicator{
     opacity: 0;
