@@ -34,4 +34,14 @@ window.addEventListener('DOMContentLoaded', () => {
             $('.tab_ui:nth-child(3)').addClass('on');
         }
     });
+
+    document.querySelector("#section01 .tab .tab_ui:nth-child(1)").addEventListener('click', () => {
+        $("#section01 .main_container").slick('goTo', 0);
+    });
+    document.querySelector("#section01 .tab .tab_ui:nth-child(2)").addEventListener('click', () => {
+        $("#section01 .main_container").slick('goTo', 1);
+    });
+    document.querySelector("#section01 .tab .tab_ui:nth-child(3)").addEventListener('click', () => {
+        $("#section01 .main_container").slick('goTo', 2);
+    });
 });
