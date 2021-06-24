@@ -20,9 +20,10 @@ const detectSection = (destination) => {
     }
     if (destination==1){
         document.querySelector(".logo").style.filter = "invert(1)";
-        console.log(destination)
+        document.querySelector(".menu").style.filter = "invert(1)";
     }else{
         document.querySelector(".logo").style.filter = "invert(0)";
+        document.querySelector(".menu").style.filter = "invert(0)";
     }
 }
 

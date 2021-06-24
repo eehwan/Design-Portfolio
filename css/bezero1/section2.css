@@ -86,6 +86,10 @@
     transform: translateX(0px);
     transition: all 1s ease-in-out .3s;
 }
+/* #section02.on .slider:hover{
+    transform: translateX(0px);
+    transition: all 1s ease-in-out .3s;
+} */
 #section02 .right{
     opacity: 0;
     transform: translateY(100px);
